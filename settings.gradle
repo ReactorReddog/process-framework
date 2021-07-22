@@ -1,2 +1,12 @@
+pluginManagement{
+    repositories {
+        maven { url 'https://repo.spring.io/milestion'}
+        maven { url 'https://repo.spring.io/snapshot'}
+        gradlePluginPortal()
+    }
+}
 rootProject.name = 'process-framework'
+include 'process-dependencies'
+include 'process-autoconfigure'
+include 'process-tools'
 
