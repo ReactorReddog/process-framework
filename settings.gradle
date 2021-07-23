@@ -5,8 +5,15 @@ pluginManagement{
         gradlePluginPortal()
     }
 }
+
+plugins{
+    id "com.gradle.enterprise" version '3.5.2'
+}
+
 rootProject.name = 'process-framework'
 include 'process-dependencies'
 include 'process-autoconfigure'
 include 'process-tools'
+include 'process-parent'
+include 'process-starters'
 

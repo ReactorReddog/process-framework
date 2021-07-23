@@ -1,60 +1,78 @@
 plugins {
     id 'java-library'
+    id 'maven-publish'
+    id 'io.spring.nohttp' version '0.0.3.RELEASE'
 }
+defaultTasks 'build'
 
 group 'com.cn.ykyoung'
 version 'K-2021.RC.1.0.0.RELEASE'
 description('process-framework-root dir')
 
-repositories {
-    mavenCentral()
-    maven { url 'https://repo.spring.io/milestion' }
-    maven { url 'https://repo.spring.io/snapshot' }
-    maven { url 'https://maven.aliyun.com/repository/public' }
-    maven {
-        credentials {
-            username '6050cd189191edede7e2abd3'
-            password 'mBAEUY4lkWiS'
-        }
-        url 'https://packages.aliyun.com/maven/repository/2096946-release-pt0wP0/'
-    }
-    maven {
-        credentials {
-            username '6050cd189191edede7e2abd3'
-            password 'mBAEUY4lkWiS'
-        }
-        url 'https://packages.aliyun.com/maven/repository/2096946-snapshot-AVOrXG/'
-    }
-}
+sourceCompatibility=14
+
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }
 
+compileJava{
+    sourceCompatibility = 14
+    targetCompatibility = 14
+}
+compileTestJava{
+    sourceCompatibility = 14
+    targetCompatibility = 14
+}
 test {
     useJUnitPlatform()
 }
-//allprojects {
-//    apply plugin: 'java'
-//    uploadArchives {
-//        repositories {
-//            mavenDeployer {
-//                repository(url: 'https://packages.aliyun.com/maven/repository/2096946-release-pt0wP0/') {
-//                    authentication(
-//                            userName: '6050cd189191edede7e2abd3',
-//                            password: 'mBAEUY4lkWiS'
-//                    )
-//                }
-//                snapshotRepository(url: 'https://packages.aliyun.com/maven/repository/2096946-snapshot-AVOrXG/') {
-//                    authentication(
-//                            userName: '6050cd189191edede7e2abd3',
-//                            password: 'mBAEUY4lkWiS'
-//                    )
-//                }
-//                pom.version = '$project.version'
-//                pom.artifactId = '$artifactId'
-//                pom.groupId = '$project.group'
+allprojects {
+    repositories {
+        mavenCentral()
+        maven { url 'https://repo.spring.io/milestion' }
+        maven { url 'https://repo.spring.io/snapshot' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven {
+            credentials {
+                username '6050cd189191edede7e2abd3'
+                password 'mBAEUY4lkWiS'
+            }
+            url 'https://packages.aliyun.com/maven/repository/2096946-release-pt0wP0/'
+        }
+        maven {
+            credentials {
+                username '6050cd189191edede7e2abd3'
+                password 'mBAEUY4lkWiS'
+            }
+            url 'https://packages.aliyun.com/maven/repository/2096946-snapshot-AVOrXG/'
+        }
+    }
+}
+
+task sourcesJar(type:Jar){
+    classifier = "sources"
+    from sourceSets.main.allJava
+}
+//apply plugin: 'java'
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            repository(url: 'https://packages.aliyun.com/maven/repository/2096946-release-pt0wP0/') {
+//                authentication(
+//                        userName: '6050cd189191edede7e2abd3',
+//                        password: 'mBAEUY4lkWiS'
+//                )
 //            }
+//            snapshotRepository(url: 'https://packages.aliyun.com/maven/repository/2096946-snapshot-AVOrXG/') {
+//                authentication(
+//                        userName: '6050cd189191edede7e2abd3',
+//                        password: 'mBAEUY4lkWiS'
+//                )
+//            }
+//            pom.version = '$project.version'
+//            pom.artifactId = '$artifactId'
+//            pom.groupId = '$project.group'
 //        }
 //    }
 //}
