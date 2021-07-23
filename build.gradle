@@ -14,6 +14,7 @@ sourceCompatibility=14
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation 'org.projectlombok:lombok:1.18.20'
 }
 
 compileJava{
@@ -54,25 +55,3 @@ task sourcesJar(type:Jar){
     classifier = "sources"
     from sourceSets.main.allJava
 }
-//apply plugin: 'java'
-//uploadArchives {
-//    repositories {
-//        mavenDeployer {
-//            repository(url: 'https://packages.aliyun.com/maven/repository/2096946-release-pt0wP0/') {
-//                authentication(
-//                        userName: '6050cd189191edede7e2abd3',
-//                        password: 'mBAEUY4lkWiS'
-//                )
-//            }
-//            snapshotRepository(url: 'https://packages.aliyun.com/maven/repository/2096946-snapshot-AVOrXG/') {
-//                authentication(
-//                        userName: '6050cd189191edede7e2abd3',
-//                        password: 'mBAEUY4lkWiS'
-//                )
-//            }
-//            pom.version = '$project.version'
-//            pom.artifactId = '$artifactId'
-//            pom.groupId = '$project.group'
-//        }
-//    }
-//}
