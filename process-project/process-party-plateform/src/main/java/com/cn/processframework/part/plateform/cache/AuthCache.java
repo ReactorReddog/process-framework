@@ -1,8 +1,9 @@
-package com.cn.processframework.part.plateform.support.caching;
+package com.cn.processframework.part.plateform.cache;
 
 /**
- * Cache to store state
- * @author tom branne
+ * @author apple
+ * @desc 缓存，用来缓存State
+ * @since 1.0 21:40
  */
 public interface AuthCache {
     /**

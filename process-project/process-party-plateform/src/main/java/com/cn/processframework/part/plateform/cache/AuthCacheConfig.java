@@ -1,11 +1,11 @@
-package com.cn.processframework.part.plateform.support.caching;
+package com.cn.processframework.part.plateform.cache;
 
 /**
- * cache配置类
- * @author tom branne
+ * @author apple
+ * @desc AuthCache配置类
+ * @since 1.0 21:42
  */
 public class AuthCacheConfig {
-
     /**
      * 默认缓存过期时间：3分钟
      * 鉴于授权过程中，根据个人的操作习惯，或者授权平台的不同（google等），每个授权流程的耗时也有差异，不过单个授权流程一般不会太长

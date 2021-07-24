@@ -1,7 +1,9 @@
-package com.cn.processframework.part.plateform.support.caching;
+package com.cn.processframework.part.plateform.cache;
 
 /**
- * state缓存接口 方便用户扩展
+ * @author apple
+ * @desc State缓存接口，方便后期扩展
+ * @since 1.0 21:43
  */
 public interface AuthStateCache {
     /**

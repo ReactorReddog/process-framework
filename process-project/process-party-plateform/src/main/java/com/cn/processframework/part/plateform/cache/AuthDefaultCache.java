@@ -1,6 +1,5 @@
-package com.cn.processframework.part.plateform.support.caching;
+package com.cn.processframework.part.plateform.cache;
 
-import com.cn.processframework.part.plateform.support.schedule.AuthCacheScheduler;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,9 +11,11 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
- * 默认缓存实现
+ * @author apple
+ * @desc 默认的缓存实现
+ * @since 1.0 21:41
  */
-public class AuthDefaultCache implements AuthCache{
+public class AuthDefaultCache implements AuthCache {
     /**
      * state cache
      */

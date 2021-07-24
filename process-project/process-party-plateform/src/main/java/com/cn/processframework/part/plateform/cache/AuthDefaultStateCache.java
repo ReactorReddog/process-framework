@@ -1,9 +1,11 @@
-package com.cn.processframework.part.plateform.support.caching;
+package com.cn.processframework.part.plateform.cache;
 
 /**
- * 默认的state缓存实现
+ * @author apple
+ * @desc 默认的state缓存实现
+ * @since 1.0 21:44
  */
-public enum AuthDefaultStateCache implements AuthStateCache{
+public enum AuthDefaultStateCache implements AuthStateCache {
     /**
      * 当前实例
      */

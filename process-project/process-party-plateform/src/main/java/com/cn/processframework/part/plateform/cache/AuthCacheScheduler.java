@@ -1,4 +1,4 @@
-package com.cn.processframework.part.plateform.support.schedule;
+package com.cn.processframework.part.plateform.cache;
 
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
@@ -6,7 +6,9 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * 缓存调度器
+ * @author apple
+ * @desc 缓存调度器
+ * @since 1.0 21:42
  */
 public enum AuthCacheScheduler {
     /**
@@ -23,7 +25,7 @@ public enum AuthCacheScheduler {
 
     private void create() {
         this.shutdown();
-        this.scheduler = new ScheduledThreadPoolExecutor(10, r -> new Thread(r, String.format("process-auth-Task-%s", cacheTaskNumber.getAndIncrement())));
+        this.scheduler = new ScheduledThreadPoolExecutor(10, r -> new Thread(r, String.format("JustAuth-Task-%s", cacheTaskNumber.getAndIncrement())));
     }
 
     public void shutdown() {
