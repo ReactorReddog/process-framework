@@ -2,12 +2,24 @@ pluginManagement{
     repositories {
         maven { url 'https://repo.spring.io/milestion'}
         maven { url 'https://repo.spring.io/snapshot'}
+        mavenCentral()
         gradlePluginPortal()
+        maven {
+            url 'http://repo.spring.io/plugins-release'
+        }
+    }
+    resolutionStrategy{
+        eachPlugin{
+            if (requested.id.id =="io.spring.javaformat"){
+                useModule "io.spring.javaformat:spring-javaformat-gradle-plugin:${requested.version}"
+            }
+        }
     }
 }
 
 plugins{
     id "com.gradle.enterprise" version '3.5.2'
+//    id 'io.spring.ge.conventions' version '0.0.7'
 }
 
 rootProject.name = 'process-framework'

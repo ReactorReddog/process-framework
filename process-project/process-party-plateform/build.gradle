@@ -3,17 +3,16 @@ plugins {
 }
 
 group 'com.cn.ykyoung'
-version 'K-2021.RC.1.0.0.RELEASE'
+version "${version}"
 
 description = '第三方登录组件'
 
-repositories {
-    mavenCentral()
-}
-
+//添加依赖
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation "com.xkcoding.http:simple-http:1.0.3"
+    implementation "com.alibaba:fastjson:1.2.76"
+    implementation "com.alipay.sdk:alipay-sdk-java:4.8.10.ALL"
+    implementation "org.projectlombok:lombok:${lombokVersion}"
 
 }
 
