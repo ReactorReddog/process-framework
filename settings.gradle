@@ -17,6 +17,7 @@ pluginManagement{
     }
 }
 
+
 plugins{
 //    id "com.gradle.enterprise" version '3.5.2'
 //    id 'io.spring.ge.conventions' version '0.0.7'
@@ -29,5 +30,7 @@ include 'process-tools'
 include 'process-parent'
 include 'process-starters'
 include 'process-project'
-include('process-project:process-party-plateform')
+include 'process-project:process-party-plateform'
+include 'process-starters:process-boot-starter-party-plateform'
+include 'process-starters:process-boot-starter'
 

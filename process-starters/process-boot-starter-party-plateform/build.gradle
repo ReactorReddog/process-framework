@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'com.cn.ykyoung'
+version "${version}"
+
+repositories {
+    mavenCentral()
+}
+description "第三方登录starter包"
+dependencies {
+    api(project(":process-starters:process-boot-starter"))
+    api(project(":process-project:process-party-plateform"))
+}
+
+test {
+    useJUnitPlatform()
+}

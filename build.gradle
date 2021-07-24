@@ -1,27 +1,55 @@
 plugins {
     id 'java-library'
-    id 'io.spring.nohttp' version '0.0.3.RELEASE'
     id 'io.spring.javaformat' version "${javaFormatVersion}"
-    id 'java-gradle-plugin'
     id 'checkstyle'
 }
-defaultTasks 'build'
 
 group 'com.cn.ykyoung'
 version "${version}"
 description('process-framework-root dir')
-compileJava{
-    sourceCompatibility = 14
-    targetCompatibility = 14
-}
-compileTestJava{
-    sourceCompatibility = 14
-    targetCompatibility = 14
-}
-test {
-    useJUnitPlatform()
-}
+
 allprojects {
+    apply plugin: 'maven-publish'
+    apply plugin: 'java-gradle-plugin'
+    defaultTasks 'build'
+
+    task sourcesJar(type:Jar){
+        from sourceSets.main.allJava
+    }
+    compileJava{
+        sourceCompatibility = 14
+        targetCompatibility = 14
+    }
+    compileTestJava{
+        sourceCompatibility = 14
+        targetCompatibility = 14
+    }
+    test {
+        useJUnitPlatform()
+    }
+    publishing{
+        publications{
+            maven(MavenPublication){
+            }
+        }
+        repositories {
+            maven {
+                if (project.version.endsWith('-SNAPSHOT')){
+                    credentials {
+                        username '6050cd189191edede7e2abd3'
+                        password 'mBAEUY4lkWiS'
+                    }
+                    url 'https://packages.aliyun.com/maven/repository/2096946-release-pt0wP0/'
+                }else {
+                    credentials {
+                        username '6050cd189191edede7e2abd3'
+                        password 'mBAEUY4lkWiS'
+                    }
+                    url 'https://packages.aliyun.com/maven/repository/2096946-snapshot-AVOrXG/'
+                }
+            }
+        }
+    }
     repositories {
         mavenCentral()
         maven { url 'https://repo.spring.io/milestion' }
@@ -42,21 +70,19 @@ allprojects {
             url 'https://packages.aliyun.com/maven/repository/2096946-snapshot-AVOrXG/'
         }
     }
-}
+    dependencies{
+        //运行时访问
+        implementation "org.projectlombok:lombok:${lombokVersion}"
+        annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
-task sourcesJar(type:Jar){
-    classifier = "sources"
-    from sourceSets.main.allJava
+        implementation "com.fasterxml.jackson.core:jackson-databind:${jacksonDataBindVersion}"
+        implementation "io.spring.javaformat:spring-javaformat-gradle-plugin:${javaFormatVersion}"
+    }
 }
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
-    //运行时访问
-    implementation "org.projectlombok:lombok:${lombokVersion}"
-    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
-
     checkstyle "io.spring.javaformat:spring-javaformat-checkstyle:${javaFormatVersion}"
-    implementation "com.fasterxml.jackson.core:jackson-databind:${jacksonDataBindVersion}"
-    implementation "io.spring.javaformat:spring-javaformat-gradle-plugin:${javaFormatVersion}"
+
 }
