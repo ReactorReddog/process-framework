@@ -16,4 +16,6 @@ include 'process-autoconfigure'
 include 'process-tools'
 include 'process-parent'
 include 'process-starters'
+include 'process-project'
+include('process-project:process-party-plateform')
 
