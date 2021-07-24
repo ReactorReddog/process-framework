@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'com.cn.ykyoung'
+group 'com.cn.processframework'
 version "${version}"
 
 repositories {

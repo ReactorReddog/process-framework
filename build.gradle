@@ -4,7 +4,7 @@ plugins {
     id 'checkstyle'
 }
 
-group 'com.cn.ykyoung'
+group 'com.cn.processframework'
 version "${version}"
 description('process-framework-root dir')
 
