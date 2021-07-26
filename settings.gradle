@@ -34,4 +34,6 @@ include 'process-project:process-party-plateform'
 include 'process-starters:process-boot-starter-party-plateform'
 include 'process-starters:process-boot-starter'
 include 'process-project:process-pay'
+include 'process-project:process-oss'
+include 'process-project:process-sms'
 
