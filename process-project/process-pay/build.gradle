@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+}
+description "第三方支付中心"
+group 'com.cn.processframework'
+version "${version}"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+}
