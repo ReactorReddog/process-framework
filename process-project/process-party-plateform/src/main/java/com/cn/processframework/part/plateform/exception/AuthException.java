@@ -1,7 +1,7 @@
 package com.cn.processframework.part.plateform.exception;
 
-import com.cn.processframework.part.plateform.config.AuthSource;
-import com.cn.processframework.part.plateform.constants.AuthResponseStatus;
+import com.cn.processframework.part.plateform.configuration.AuthSource;
+import com.cn.processframework.part.plateform.AuthResponseStatus;
 
 /**
  * @author apple
