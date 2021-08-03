@@ -10,8 +10,7 @@ import com.cn.processframework.part.plateform.UrlBuilder;
  * </p>
  *
  * @author apple
- * @author liguanhua (347826496(a)qq.com) 重构该类，将通用方法提取
- * @author lapple 修改类名
+ * @desc 重构该类，将通用方法提取
  * @since 1.10.0
  */
 public class AuthWeChatEnterpriseQrcodeRequest extends AbstractAuthWeChatEnterpriseRequest {

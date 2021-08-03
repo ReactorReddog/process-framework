@@ -7,7 +7,7 @@ import java.security.NoSuchAlgorithmException;
 /**
  * SHA256 加密
  *
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
+ * @author apple
  * @version 1.0.0
  * @since 1.16.0
  */

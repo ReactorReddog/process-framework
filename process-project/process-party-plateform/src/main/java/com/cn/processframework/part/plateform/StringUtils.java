@@ -3,7 +3,7 @@ package com.cn.processframework.part.plateform;
 import java.nio.charset.Charset;
 
 /**
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
+ * @author apple
  * @since 1.0.0
  */
 public class StringUtils {

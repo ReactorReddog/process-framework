@@ -21,7 +21,7 @@ import java.util.TreeMap;
 /**
  * 喜马拉雅登录
  *
- * @author zwzch (zwzch4j@gmail.com)
+ * @author apple
  * @since 1.15.9
  */
 public class AuthXmlyRequest extends AuthDefaultRequest {
