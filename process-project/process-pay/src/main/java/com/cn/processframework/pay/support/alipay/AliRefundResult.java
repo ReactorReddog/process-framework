@@ -81,7 +81,7 @@ public class AliRefundResult extends BaseRefundResult {
     @JSONField(name = "refund_currency")
     private DefaultCurType refundCurrency;
     /**
-     * 退款支付时间 	2014-11-27 15:45:57
+     * 退款支付时间 	2020-11-27 15:45:57
      */
     @JSONField(name = "gmt_refund_pay")
     private Date gmtRefundPay;

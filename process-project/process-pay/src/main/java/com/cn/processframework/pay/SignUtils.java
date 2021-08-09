@@ -29,7 +29,7 @@ public enum SignUtils implements SignType {
          */
         @Override
         public String createSign(String content, String key, String characterEncoding) {
-            return MD5.sign(content, key, characterEncoding);
+            return com.cn.processframework.pay.MD5.sign(content, key, characterEncoding);
         }
 
         /**
@@ -105,7 +105,7 @@ public enum SignUtils implements SignType {
     RSA {
         @Override
         public String createSign(String content, String key, String characterEncoding) {
-            return com.cn.reddog.pay.java.common.utils.encrypt.RSA.sign(content, key, characterEncoding);
+            return com.cn.processframework.pay.RSA.sign(content, key, characterEncoding);
         }
 
         @Override
@@ -117,45 +117,45 @@ public enum SignUtils implements SignType {
     RSA2 {
         @Override
         public String createSign(String content, String key, String characterEncoding) {
-            return com.cn.reddog.pay.java.common.utils.encrypt.RSA2.sign(content, key, characterEncoding);
+            return com.cn.processframework.pay.RSA2.sign(content, key, characterEncoding);
         }
 
         @Override
         public boolean verify(String text, String sign, String publicKey, String characterEncoding) {
-            return com.cn.reddog.pay.java.common.utils.encrypt.RSA2.verify(text, sign, publicKey, characterEncoding);
+            return RSA2.verify(text, sign, publicKey, characterEncoding);
         }
     },
     SHA1 {
         @Override
         public String createSign(String content, String key, String characterEncoding) {
-            return com.cn.reddog.pay.java.common.utils.encrypt.SHA1.sign(content, key, characterEncoding);
+            return com.cn.processframework.pay.SHA1.sign(content, key, characterEncoding);
         }
 
         @Override
         public boolean verify(String text, String sign, String publicKey, String characterEncoding) {
-            return com.cn.reddog.pay.java.common.utils.encrypt.SHA1.verify(text, sign, publicKey, characterEncoding);
+            return SHA1.verify(text, sign, publicKey, characterEncoding);
         }
     },
     SHA256 {
         @Override
         public String createSign(String content, String key, String characterEncoding) {
-            return com.cn.reddog.pay.java.common.utils.encrypt.SHA256.sign(content, key, characterEncoding);
+            return com.cn.processframework.pay.SHA256.sign(content, key, characterEncoding);
         }
 
         @Override
         public boolean verify(String text, String sign, String publicKey, String characterEncoding) {
-            return com.cn.reddog.pay.java.common.utils.encrypt.SHA256.verify(text, sign, publicKey, characterEncoding);
+            return SHA256.verify(text, sign, publicKey, characterEncoding);
         }
     },
     SM3 {
         @Override
         public String createSign(String content, String key, String characterEncoding) {
-            return com.cn.reddog.pay.java.common.utils.encrypt.RSA2.sign(content, key, characterEncoding);
+            return com.cn.processframework.pay.RSA2.sign(content, key, characterEncoding);
         }
 
         @Override
         public boolean verify(String text, String sign, String publicKey, String characterEncoding) {
-            return com.cn.reddog.pay.java.common.utils.encrypt.RSA2.verify(text, sign, publicKey, characterEncoding);
+            return RSA2.verify(text, sign, publicKey, characterEncoding);
         }
     };
     private static final Log LOG = LogFactory.getLog(SignUtils.class);
@@ -212,7 +212,7 @@ public enum SignUtils implements SignType {
             Arrays.sort(ignoreKey);
         }
         StringBuffer sb = new StringBuffer();
-        // TODO 2016/11/11 10:14 author: egan 已经排序好处理
+        // TODO 2020/11/11 10:14 author: apple 已经排序好处理
         if (parameters instanceof SortedMap) {
             for (Map.Entry<String, Object> entry :  parameters.entrySet()) {
                 Object v = entry.getValue();
@@ -239,7 +239,7 @@ public enum SignUtils implements SignType {
 
     private static String sortMapParameterText(Map<String, Object> parameters, String separator, boolean ignoreNullValue, String... ignoreKey) {
         StringBuffer sb = new StringBuffer();
-        // TODO 2016/11/11 10:14 author: egan 未排序须处理
+        // TODO 2020/11/11 10:14 author: apple 未排序须处理
         List<String> keys = new ArrayList<String>(parameters.keySet());
         //排序
         Collections.sort(keys);
