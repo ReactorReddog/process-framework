@@ -1,6 +1,6 @@
 package com.cn.processframework.pay.support.alipay;
 
-import com.cn.reddog.pay.java.common.core.base.TransferOrder;
+import com.cn.processframework.pay.TransferOrder;
 
 import java.math.BigDecimal;
 import java.util.TreeMap;
