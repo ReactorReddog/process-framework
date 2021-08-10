@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group 'com.cn.processframework'
+version "${version}"
+description '第三方文档接口'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
