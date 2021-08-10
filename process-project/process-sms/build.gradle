@@ -3,7 +3,8 @@ plugins {
 }
 
 group 'com.cn.processframework'
-version 'K-2021.RC.1.0.0.SNAPSHOT'
+version "${version}"
+description '短信模版'
 
 repositories {
     mavenCentral()
