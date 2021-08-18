@@ -1,11 +1,6 @@
 package com.cn.processframework.boot.autoconfigure.pay;
 
-import com.cn.processframework.boot.pay.MerchantPayServiceManager;
-import com.cn.processframework.boot.pay.PayServiceConfigurer;
-import com.cn.processframework.boot.pay.PayServiceManager;
-import com.cn.processframework.boot.pay.DefalutPayMessageConfigurer;
-import com.cn.processframework.boot.pay.MerchantDetailsServiceConfigurer;
-import com.cn.processframework.boot.pay.PayMessageConfigurer;
+import com.cn.processframework.boot.pay.*;
 import com.cn.processframework.boot.pay.merchant.MerchantDetailsService;
 import com.cn.processframework.boot.pay.merchant.PaymentPlatform;
 import com.cn.processframework.boot.pay.support.*;

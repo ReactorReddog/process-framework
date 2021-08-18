@@ -7,6 +7,6 @@ version "${version}"
 dependencies {
 
     implementation "org.springframework.boot:spring-boot-starter-jdbc:${springBootAutoConfiureVersion}"
-    implementation(project(":process-project:process-pay"))
+    api(project(":process-project:process-pay"))
     implementation "org.springframework.boot:spring-boot-autoconfigure:${springBootAutoConfiureVersion}"
 }
