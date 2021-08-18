@@ -4,10 +4,9 @@ plugins {
 group 'com.cn.processframework'
 version "${version}"
 
-description 'process boot AutoConfigure'
-
-
 dependencies {
-    implementation(project(":process-boot"))
+
+    implementation "org.springframework.boot:spring-boot-starter-jdbc:${springBootAutoConfiureVersion}"
+    implementation(project(":process-project:process-pay"))
     implementation "org.springframework.boot:spring-boot-autoconfigure:${springBootAutoConfiureVersion}"
 }

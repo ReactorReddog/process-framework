@@ -5,15 +5,8 @@ plugins {
 group 'com.cn.processframework'
 version "${version}"
 
-repositories {
-    mavenCentral()
-}
-description "第三方登录starter包"
+description "starter for using Process boot's party-plateform which providers productionn to help you application pay"
 dependencies {
     api(project(":process-starters:process-boot-starter"))
     api(project(":process-project:process-party-plateform"))
-}
-
-test {
-    useJUnitPlatform()
 }

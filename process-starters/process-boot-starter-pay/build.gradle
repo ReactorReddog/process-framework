@@ -1,0 +1,12 @@
+plugins {
+    id 'java'
+}
+description "starter for using Process-pay"
+
+group 'com.cn.processframework'
+version "${version}"
+
+dependencies {
+    api(project(":process-starters:process-boot-starter"))
+    api(project(":process-project:process-pay"))
+}
