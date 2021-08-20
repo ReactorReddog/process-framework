@@ -14,7 +14,7 @@ import java.util.Map;
  */
 public enum  WxTransactionType implements TransactionType {
     /**
-     * 公众号支付
+     * 公众号支付、微信小程序 JSAPI
      */
     JSAPI("pay/unifiedorder") {
         @Override
@@ -42,7 +42,7 @@ public enum  WxTransactionType implements TransactionType {
         }
     },
     /**
-     * 移动支付
+     * 移动支付 微信app
      */
     APP("pay/unifiedorder"),
     /**
@@ -56,7 +56,7 @@ public enum  WxTransactionType implements TransactionType {
         }
     },
     /**
-     * H5支付
+     * 微信 H5支付
      */
     MWEB("pay/unifiedorder"){
         @Override
