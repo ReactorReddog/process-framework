@@ -41,13 +41,13 @@ allprojects {
                         username "${dentialCredientUsername}"
                         password "${dentialCredientUserpassword}"
                     }
-                    url 'https://packages.aliyun.com/maven/repository/2096946-release-pt0wP0/'
+                    url 'https://packages.aliyun.com/maven/repository/2096946-snapshot-AVOrXG/'
                 }else {
                     credentials {
                         username "${dentialCredientUsername}"
                         password "${dentialCredientUserpassword}"
                     }
-                    url 'https://packages.aliyun.com/maven/repository/2096946-snapshot-AVOrXG/'
+                    url 'https://packages.aliyun.com/maven/repository/2096946-release-pt0wP0/'
                 }
             }
         }
