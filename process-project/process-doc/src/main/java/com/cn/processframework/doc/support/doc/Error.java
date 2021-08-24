@@ -1,4 +1,4 @@
-package com.cn.processframework.doc.support;
+package com.cn.processframework.doc.support.doc;
 
 /**
  * @author apple

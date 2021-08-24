@@ -1,4 +1,4 @@
-package com.cn.processframework.doc.support;
+package com.cn.processframework.doc.support.doc;
 
 import com.cn.processframework.doc.constants.EnvConfigEnum;
 import lombok.Data;

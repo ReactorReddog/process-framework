@@ -15,7 +15,3 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
     implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.8.11"
 }
-
-test {
-    useJUnitPlatform()
-}

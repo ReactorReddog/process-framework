@@ -1,4 +1,4 @@
-package com.cn.processframework.doc.support;
+package com.cn.processframework.doc.support.doc;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
