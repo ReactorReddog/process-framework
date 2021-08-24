@@ -1,15 +1,16 @@
-package com.cn.processframework.doc.api;
+package com.cn.processframework.doc;
 
+import com.cn.processframework.doc.api.CatelogConfigApi;
 import com.cn.processframework.doc.support.DocItemMenu;
 import com.cn.processframework.doc.support.doc.DocInfoDate;
 
 /**
  * @author apple
  * @package com.cn.processframework.doc
- * @desc <p>定义标题或目录、文档详情信息获取接口</p>
+ * @desc <p>定义标题或目录、文档详情信息获取接口 默认实现</p>
  * @since 1.0.0.RELEASE
  */
-public interface ApiCatelogConfigApi {
+public class DefaultCatelogConfigApi implements CatelogConfigApi {
     /**
      * 获取开放平台目录
      * @param scopeId 授权组
@@ -17,9 +18,12 @@ public interface ApiCatelogConfigApi {
      * @param docId 文档id
      * @param docType 文档类型
      * @param tag 标签呢
-     * @return DocItemMenu
+     * @return
      */
-    DocItemMenu getApiCateLogItemMenu(Long scopeId,Long treeId,Long docId,Long docType,String tag);
+    @Override
+    public DocItemMenu getApiCateLogItemMenu(Long scopeId, Long treeId, Long docId, Long docType, String tag) {
+        return null;
+    }
 
     /**
      * 获取文档信息介绍
@@ -27,7 +31,10 @@ public interface ApiCatelogConfigApi {
      * @param docType 文档类型
      * @param isEn 是否是英文
      * @param docId 文档id
-     * @return DocInfoDate
+     * @return
      */
-    DocInfoDate getDocumentDocInfoDate(Long treeId,Long docType,boolean isEn,Long docId);
+    @Override
+    public DocInfoDate getDocumentDocInfoDate(Long treeId, Long docType, boolean isEn, Long docId) {
+        return null;
+    }
 }
