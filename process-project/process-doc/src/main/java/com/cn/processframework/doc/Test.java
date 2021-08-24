@@ -8,11 +8,10 @@ import java.io.StringWriter;
 
 public class Test {
     public static void main(String[] args) throws IOException {
-        XmlMapper xmlMapper = new XmlMapper();
         DocInfoDate docInfoDate = new DocInfoDate();
         StringWriter s=new StringWriter();
         String b = new String();
-        xmlMapper.writeValue(s,docInfoDate);
+        XmlUtils.getInstance().xmlMapper().writeValue(s,docInfoDate);
         b = s.toString();
         System.out.println(b);
     }
