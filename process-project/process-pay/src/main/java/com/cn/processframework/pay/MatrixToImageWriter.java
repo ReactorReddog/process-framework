@@ -1,9 +1,7 @@
 package com.cn.processframework.pay;
 
-import cn.hutool.extra.qrcode.BufferedImageLuminanceSource;
 import com.google.zxing.*;
 import com.google.zxing.common.BitMatrix;
-import com.google.zxing.common.HybridBinarizer;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.imageio.ImageIO;
@@ -30,7 +28,7 @@ public class MatrixToImageWriter {
 
     private static final int QRCODE_SIZE = 300;//设置二维码尺寸
 
-    private static final int LOGO_SIZE = 40;//设置二维码logo尺寸
+    private static final int LOGO_SIZE = 60;//设置二维码logo尺寸
 
     private MatrixToImageWriter() {
     }
