@@ -1,17 +1,15 @@
 plugins {
-    id 'java-library'
+    id 'java'
 }
 
 group 'com.cn.processframework'
 version "${version}"
+description "process-framework-tools"
 
 description( 'tools')
-
-repositories {
-    mavenCentral()
-}
-
 dependencies {
+    //添加二维码依赖
+    implementation "com.google.zxing:core:${zxingCoreVersion}"
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
 }
