@@ -13,7 +13,6 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.URL;
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.Map;
 
 /**
@@ -23,7 +22,7 @@ import java.util.Map;
  */
 @Slf4j
 public class MatrixToImageWriter {
-    private static final int BLACK = 0xFF000000;
+    private static final int BLACK = 0xFF8A2BE2;
     private static final int WHITE = 0xFFFFFFFF;
 
     private static final int QRCODE_SIZE = 300;//设置二维码尺寸
