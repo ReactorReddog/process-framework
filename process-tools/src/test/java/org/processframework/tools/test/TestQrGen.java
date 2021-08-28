@@ -18,7 +18,7 @@ import java.net.URL;
 
 public class TestQrGen {
 
-	private static final String content = "https://baike.baidu.com/item/%E5%97%B7%E5%A4%A7%E5%96%B5/19817560?fr=aladdin";
+	private static final String content = "https://www.aliyun.com/product/yunxiao/";
 
 	private QrcodeGenerator generator = new SimpleQrcodeGenerator();
 
@@ -55,7 +55,7 @@ public class TestQrGen {
 	 */
 	@Test
 	public void testRemoteLogo() throws IOException {
-		generator.setRemoteLogo("http://www.demlution.com/site_media/media/photos/2014/11/06/3JmYoueyyxS4q4FcxcavgJ.jpg");
+		generator.setRemoteLogo("https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201412%2F04%2F20141204150752_vWUrc.jpeg&refer=http%3A%2F%2Fimg5.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1632666458&t=7891a631e45c713b10246995379572be");
 		Assert.assertTrue(generator.generate("https://www.apple.com/cn/").toStream(new FileOutputStream("./build/test.jpg")));
 	}
 
@@ -70,7 +70,7 @@ public class TestQrGen {
 			.setPadding(10)
 			.setMasterColor("#00BFFF")
 			.setLogoBorderColor("#B0C4DE");
-		Assert.assertTrue(generator.setLogo(this.localLogoPath).generate(content).toStream(new FileOutputStream("./build/test.jpg")));
+		Assert.assertTrue(generator.setRemoteLogo("https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201412%2F04%2F20141204150752_vWUrc.jpeg&refer=http%3A%2F%2Fimg5.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1632666458&t=7891a631e45c713b10246995379572be").generate(content).toStream(new FileOutputStream("./build/test.jpg")));
 	}
 	
 	/**
@@ -84,7 +84,7 @@ public class TestQrGen {
 			.setLogoBorderColor("#778899")
 			.setCodeEyesPointColor("#BC8F8F")
 			.setCodeEyesFormat(QreyesFormat.DR2_BORDER_R_POINT);
-		Assert.assertTrue(generator.setLogo(this.localLogoPath).generate(content).toStream(new FileOutputStream("./build/test.jpg")));
+		Assert.assertTrue(generator.setRemoteLogo("https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201412%2F04%2F20141204150752_vWUrc.jpeg&refer=http%3A%2F%2Fimg5.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1632666458&t=7891a631e45c713b10246995379572be").generate(content).toStream(new FileOutputStream("./build/test.jpg")));
 	}
 	
 	/**
