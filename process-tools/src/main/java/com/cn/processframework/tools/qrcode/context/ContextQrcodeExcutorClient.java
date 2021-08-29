@@ -1,6 +1,6 @@
-package com.cn.processframework.tools.qrcode;
+package com.cn.processframework.tools.qrcode.context;
 
-import com.cn.processframework.tools.QrCodeExcutorClient;
+import com.cn.processframework.tools.qrcode.QrCodeExcutorClient;
 
 import java.awt.image.BufferedImage;
 

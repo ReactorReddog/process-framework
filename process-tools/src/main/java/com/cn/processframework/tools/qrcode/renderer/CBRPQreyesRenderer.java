@@ -1,9 +1,9 @@
 package com.cn.processframework.tools.qrcode.renderer;
 
-import com.cn.processframework.tools.ReflectionUtils;
-import com.cn.processframework.tools.qrcode.QreyesFormat;
-import com.cn.processframework.tools.qrcode.QreyesPosition;
-import com.cn.processframework.tools.qrcode.QreyesRenderer;
+import com.cn.processframework.tools.qrcode.ReflectionUtils;
+import com.cn.processframework.tools.qrcode.context.QreyesFormat;
+import com.cn.processframework.tools.qrcode.context.QreyesPosition;
+import com.cn.processframework.tools.qrcode.context.QreyesRenderer;
 
 import java.awt.*;
 import java.awt.geom.Ellipse2D;

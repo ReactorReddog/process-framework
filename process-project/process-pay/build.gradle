@@ -11,7 +11,7 @@ repositories {
 
 dependencies {
     api "org.apache.httpcomponents:httpmime:${httpMimeVersion}"
-    api "com.google.zxing:core:${zxingCoreVersion}"
+//    api "com.google.zxing:core:${zxingCoreVersion}"
     api "cn.hutool:hutool-all:5.3.7"
     api(project(":process-tools"))
 }

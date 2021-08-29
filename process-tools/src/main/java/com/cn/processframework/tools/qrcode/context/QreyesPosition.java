@@ -1,4 +1,4 @@
-package com.cn.processframework.tools.qrcode;
+package com.cn.processframework.tools.qrcode.context;
 
 import java.io.Serializable;
 import java.util.HashMap;

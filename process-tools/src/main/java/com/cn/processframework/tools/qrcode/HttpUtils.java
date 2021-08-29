@@ -1,4 +1,4 @@
-package com.cn.processframework.tools;
+package com.cn.processframework.tools.qrcode;
 
 import javax.net.ssl.*;
 import java.io.ByteArrayOutputStream;

@@ -1,4 +1,4 @@
-package com.cn.processframework.tools.qrcode;
+package com.cn.processframework.tools.qrcode.context;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;

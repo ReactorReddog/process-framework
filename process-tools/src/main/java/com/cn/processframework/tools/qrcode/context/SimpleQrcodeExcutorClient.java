@@ -1,6 +1,6 @@
-package com.cn.processframework.tools.qrcode;
+package com.cn.processframework.tools.qrcode.context;
 
-import com.cn.processframework.tools.*;
+import com.cn.processframework.tools.qrcode.*;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.decoder.Version;

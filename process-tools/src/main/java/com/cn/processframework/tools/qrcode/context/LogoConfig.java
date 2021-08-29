@@ -1,6 +1,6 @@
-package com.cn.processframework.tools.qrcode;
+package com.cn.processframework.tools.qrcode.context;
 
-import com.cn.processframework.tools.Codectx;
+import com.cn.processframework.tools.qrcode.Codectx;
 
 import java.io.Serializable;
 

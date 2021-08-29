@@ -1,10 +1,10 @@
 package org.processframework.tools.test;
 
-import com.cn.processframework.tools.Codectx;
-import com.cn.processframework.tools.IOUtils;
-import com.cn.processframework.tools.qrcode.ContextQrcodeExcutorClient;
-import com.cn.processframework.tools.qrcode.QreyesFormat;
-import com.cn.processframework.tools.qrcode.SimpleQrcodeExcutorClient;
+import com.cn.processframework.tools.qrcode.Codectx;
+import com.cn.processframework.tools.qrcode.IOUtils;
+import com.cn.processframework.tools.qrcode.context.ContextQrcodeExcutorClient;
+import com.cn.processframework.tools.qrcode.context.QreyesFormat;
+import com.cn.processframework.tools.qrcode.context.SimpleQrcodeExcutorClient;
 import org.gradle.internal.impldep.org.junit.Assert;
 import org.gradle.internal.impldep.org.junit.Before;
 import org.junit.jupiter.api.Test;

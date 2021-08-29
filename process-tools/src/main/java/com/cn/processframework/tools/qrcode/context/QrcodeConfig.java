@@ -1,7 +1,7 @@
-package com.cn.processframework.tools.qrcode;
+package com.cn.processframework.tools.qrcode.context;
 
-import com.cn.processframework.tools.Codectx;
-import com.cn.processframework.tools.GenericCodeConfig;
+import com.cn.processframework.tools.qrcode.Codectx;
+import com.cn.processframework.tools.qrcode.GenericCodeConfig;
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 

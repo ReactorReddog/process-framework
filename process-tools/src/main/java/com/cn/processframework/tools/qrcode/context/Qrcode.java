@@ -1,4 +1,4 @@
-package com.cn.processframework.tools.qrcode;
+package com.cn.processframework.tools.qrcode.context;
 
 import java.awt.image.BufferedImage;
 import java.io.Serializable;
