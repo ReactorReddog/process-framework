@@ -52,9 +52,13 @@ public class DocParams implements Serializable {
      * 名字
      */
     private String name;
-
+    /**
+     *
+     */
     private Boolean needShortAuthority;
-
+    /**
+     *
+     */
     private String paramOrder;
     /**
      * 父级id
