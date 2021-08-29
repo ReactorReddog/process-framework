@@ -18,7 +18,7 @@ import java.net.URL;
 
 public class TestQrGen {
 
-	private static final String content = "https://www.aliyun.com/product/yunxiao/";
+	private static final String content = "https://docs.spring.io/spring-security/site/docs/5.6.0-M2/reference/html5/";
 
 	private ContextQrcodeExcutorClient generator = new SimpleQrcodeExcutorClient();
 

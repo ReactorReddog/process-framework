@@ -5,7 +5,9 @@ plugins {
 group 'com.cn.processframework'
 version "${version}"
 description = '第三方登录组件'
-
+repositories {
+    mavenCentral()
+}
 //添加依赖
 dependencies {
     implementation "com.xkcoding.http:simple-http:${simpleHttpVersion}"

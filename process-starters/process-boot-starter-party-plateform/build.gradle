@@ -4,7 +4,9 @@ plugins {
 
 group 'com.cn.processframework'
 version "${version}"
-
+repositories {
+    mavenCentral()
+}
 description "starter for using Process boot's party-plateform which providers productionn to help you application pay"
 dependencies {
     api(project(":process-starters:process-boot-starter"))

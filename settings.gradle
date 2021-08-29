@@ -40,5 +40,4 @@ include 'process-project:process-doc'
 include 'process-starters:process-boot-starter-pay'
 include 'process-boot'
 include 'process-starters:process-boot-starter-test'
-findProject(':process-starters:process-boot-starter-test')?.name = 'process-boot-starter-test'
 

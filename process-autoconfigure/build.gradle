@@ -5,7 +5,9 @@ group 'com.cn.processframework'
 version "${version}"
 
 description 'process boot AutoConfigure'
-
+repositories {
+    mavenCentral()
+}
 
 dependencies {
     implementation(project(":process-boot"))
