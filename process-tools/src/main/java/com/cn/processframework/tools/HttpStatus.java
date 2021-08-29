@@ -5,15 +5,17 @@ package com.cn.processframework.tools;
  *
  * Copy from 'org.apache.commons.httpclient.HttpStatus'.
  */
+
+/**
+ * @author apple
+ * @desc http状态码
+ * @since 1.0.0.RELEASE
+ */
 public class HttpStatus {
 	
 	private HttpStatus() {
 		
 	}
-
-
-    // -------------------------------------------------------- Class Variables
-
     /** Reason phrases lookup table. */
     private static final String[][] REASON_PHRASES = new String[][]{
         new String[0],

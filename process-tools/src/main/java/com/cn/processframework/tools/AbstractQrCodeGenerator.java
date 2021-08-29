@@ -68,8 +68,8 @@ public abstract class AbstractQrCodeGenerator {
      *
      * @param image An instance of BufferedImage.
      * @param radius Attribute value of border-radius.
-     * @param borderSize
-     * @param borderColor
+     * @param borderSize 边框大小
+     * @param borderColor 边框颜色
      * @param style BorderStyle.SOLID || BorderStyle.DASHED
      * @param borderDashGranularity
      * @param margin

@@ -8,12 +8,11 @@ import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * @author apple
+ * @desc 二维码配置
+ */
 public class QrcodeConfig extends GenericCodeConfig {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 8107373062688869595L;
 
 	private static ConcurrentHashMap<EncodeHintType, Object> hints = null;
 
@@ -24,27 +23,48 @@ public class QrcodeConfig extends GenericCodeConfig {
 		hints.put(EncodeHintType.CHARACTER_SET, "UTF-8");
 	}
 
+	/**
+	 * 二维码背景层大小
+	 */
 	private int margin = Codectx.DEFAULT_CODE_MARGIN;
-
+	/**
+	 * 二维码padding参数
+	 */
 	@Deprecated
 	private int padding = Codectx.DEFAULT_CODE_PADDING;
-
+	/**
+	 * 二维码内容外区域添加边框 厚度
+	 */
 	private int borderSize = Codectx.DEFAULT_CODE_BORDER_SIZE;
-
+	/**
+	 * 边框圆角度
+	 */
 	private int borderRadius = Codectx.DEFAULT_CODE_BORDER_RADIUS;
-
+	/**
+	 * 边框背景色
+	 */
 	private String borderColor = Codectx.DEFAULT_CODE_BORDER_COLOR;
-
+	/**
+	 * 边框的类型 属于虚线型还是实现型
+	 */
 	private Codectx.BorderStyle borderStyle = Codectx.BorderStyle.DASHED;
-
+	/**
+	 * 二维码背景虚线密集度
+	 */
 	private int borderDashGranularity = Codectx.DEFAULT_CODE_BORDER_DASH_GRANULARITY;
-
+	/**
+	 * 码眼颜色 不包含内部
+	 */
 	private String codeEyesBorderColor = Codectx.DEFAULT_CODE_MASTER_COLOR;
 
 	private String codeEyesPointColor = Codectx.DEFAULT_CODE_MASTER_COLOR;
-	
+	/**
+	 * 码眼及内部图形类型  默认：含码眼及其内部图形 矩形
+	 */
 	private QreyesFormat codeEyesFormat = QreyesFormat.R_BORDER_R_POINT;
-
+	/**
+	 * logo配置
+	 */
 	private final LogoConfig logoConfig = new LogoConfig();
 
 	public QrcodeConfig() {

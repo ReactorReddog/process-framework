@@ -3,7 +3,9 @@ package com.cn.processframework.tools;
 import java.io.*;
 
 /**
- * FileUtils
+ * @author apple
+ * @desc FileUtils
+ * @since 1.0.0.RELEASE
  */
 public class FileUtils {
 

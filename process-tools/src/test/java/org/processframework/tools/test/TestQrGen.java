@@ -1,5 +1,6 @@
 package org.processframework.tools.test;
 
+import com.cn.processframework.tools.Codectx;
 import com.cn.processframework.tools.IOUtils;
 import com.cn.processframework.tools.qrcode.QrcodeGenerator;
 import com.cn.processframework.tools.qrcode.QreyesFormat;
@@ -81,9 +82,20 @@ public class TestQrGen {
 	public void testCustomCodeEyes() throws IOException {
 		generator.getQrcodeConfig()
 			.setMasterColor("#778899")
+				.setBorderSize(1)
+				.setBorderColor("#FF0000")
+				.setBorderStyle(Codectx.BorderStyle.DASHED)
+				.setCodeEyesFormat(QreyesFormat.C_BORDER_C_POINT)
+				.setBorderRadius(10)
+				.setCodeEyesPointColor("#FF0000")
+				.setMargin(10)
+				.setPadding(20)
+				.setBorderDashGranularity(4)
+				.setLogoMargin(10)
+
 			.setLogoBorderColor("#778899")
-			.setCodeEyesPointColor("#BC8F8F")
-			.setCodeEyesFormat(QreyesFormat.DR2_BORDER_R_POINT);
+			.setCodeEyesPointColor("#BC8F8F");
+//			.setCodeEyesFormat(QreyesFormat.DR2_BORDER_R_POINT);
 		Assert.assertTrue(generator.setRemoteLogo("https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201412%2F04%2F20141204150752_vWUrc.jpeg&refer=http%3A%2F%2Fimg5.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1632666458&t=7891a631e45c713b10246995379572be").generate(content).toStream(new FileOutputStream("./build/test.jpg")));
 	}
 	

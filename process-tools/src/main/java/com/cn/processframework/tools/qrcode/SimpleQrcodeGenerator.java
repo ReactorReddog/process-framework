@@ -13,6 +13,11 @@ import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
 
+/**
+ * @author apple
+ * @desc 二维码简单实现
+ * @since 1.0.0.RELEASE
+ */
 public class SimpleQrcodeGenerator extends AbstractQrCodeGenerator implements QrcodeGenerator {
 
 	private static final ThreadQrcode QRCODE = new ThreadQrcode();

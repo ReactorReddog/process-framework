@@ -3,6 +3,11 @@ package com.cn.processframework.tools.qrcode;
 
 import java.awt.image.BufferedImage;
 
+/**
+ * @author apple
+ * @desc
+ * @since 1.0.0.RELEASE
+ */
 public class ThreadQrcode extends ThreadLocal<Qrcode> {
 
 	@Override
