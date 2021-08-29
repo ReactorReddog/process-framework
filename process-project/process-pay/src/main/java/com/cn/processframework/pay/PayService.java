@@ -138,7 +138,7 @@ public interface PayService<PC extends PayConfigStorage> {
      * @param <O>   预订单类型
      * @return 返回图片信息，支付时需要的
      */
-    <O extends PayOrder> BufferedImage genQrPay(O order);
+    <O extends PayOrder> BufferedImage genQrPay(O order,String avatorUrl);
 
     /**
      * 获取输出二维码信息,

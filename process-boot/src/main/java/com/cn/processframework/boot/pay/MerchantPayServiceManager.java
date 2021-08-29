@@ -93,13 +93,13 @@ public class MerchantPayServiceManager implements PayServiceManager {
      * @throws IOException IOException
      */
     @Override
-    public byte[] toQrPay(MerchantPayOrder payOrder) throws IOException {
+    public byte[] toQrPay(MerchantPayOrder payOrder,String avatorUrl) throws IOException {
         //获取对应的支付账户操作工具（可根据账户id）
         PaymentPlatformMerchantDetails details = detailsService.loadMerchantByMerchantId(payOrder.getDetailsId());
         payOrder.setTransactionType(details.getPaymentPlatform().getTransactionType(payOrder.getWayTrade()));
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
-        ImageIO.write(details.getPayService().genQrPay(payOrder), "JPEG", baos);
+        ImageIO.write(details.getPayService().genQrPay(payOrder,avatorUrl), "JPEG", baos);
         return baos.toByteArray();
     }
     /**

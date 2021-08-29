@@ -26,6 +26,9 @@ allprojects {
         sourceCompatibility = 14
         targetCompatibility = 14
     }
+    tasks.withType(JavaCompile){
+        options.encoding("UTF-8")
+    }
     test {
         useJUnitPlatform()
     }

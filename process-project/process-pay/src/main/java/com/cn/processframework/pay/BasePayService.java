@@ -3,6 +3,11 @@ package com.cn.processframework.pay;
 import com.alibaba.fastjson.JSON;
 import com.cn.processframework.pay.handler.DefaultPayMessageHandler;
 import com.cn.processframework.pay.inteceptor.PayMessageInterceptor;
+import com.cn.processframework.tools.qrcode.Codectx;
+import com.cn.processframework.tools.qrcode.QrCodeExcutorClient;
+import com.cn.processframework.tools.qrcode.context.ContextQrcodeExcutorClient;
+import com.cn.processframework.tools.qrcode.context.QreyesFormat;
+import com.cn.processframework.tools.qrcode.context.SimpleQrcodeExcutorClient;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -148,11 +153,20 @@ public abstract class BasePayService<PC extends PayConfigStorage> implements Pay
      * 生成二维码支付
      *
      * @param order 发起支付的订单信息
+     * @param avatorUrl 头像地址
      * @return 返回图片信息，支付时需要的
      */
     @Override
-    public <O extends PayOrder> BufferedImage genQrPay(O order) {
-        return MatrixToImageWriter.writeInfoToJpgBuff(getQrPay(order));
+    public <O extends PayOrder> BufferedImage genQrPay(O order,String avatorUrl) {
+        ContextQrcodeExcutorClient codeExcutorClient = new SimpleQrcodeExcutorClient();
+        codeExcutorClient.getQrcodeConfig()
+                .setMasterColor("#778899")
+                .setBorderSize(1)
+                .setBorderStyle(Codectx.BorderStyle.DASHED)
+                .setCodeEyesFormat(QreyesFormat.R2_BORDER_R_POINT)
+                .setBorderRadius(10);
+        //        return MatrixToImageWriter.writeInfoToJpgBuff(getQrPay(order));
+        return codeExcutorClient.setRemoteLogo(avatorUrl).generate(getQrPay(order)).getImage();
     }
 
     /**

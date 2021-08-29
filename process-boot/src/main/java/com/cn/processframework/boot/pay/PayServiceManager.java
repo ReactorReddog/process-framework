@@ -55,7 +55,7 @@ public interface PayServiceManager {
      * @return 二维码图像
      * @throws IOException IOException
      */
-    byte[] toQrPay(MerchantPayOrder payOrder) throws IOException;
+    byte[] toQrPay(MerchantPayOrder payOrder,String avatorUrl) throws IOException;
 
     /**
      * 获取二维码信息
