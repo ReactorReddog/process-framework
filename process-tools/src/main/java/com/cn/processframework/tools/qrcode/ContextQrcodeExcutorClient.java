@@ -9,7 +9,7 @@ import java.awt.image.BufferedImage;
  * @desc 二维码生成类
  * @since 1.0.0.RELEASE
  */
-public interface QrcodeGenerator extends QrCodeExcutorClient {
+public interface ContextQrcodeExcutorClient extends QrCodeExcutorClient {
 	/**
 	 * 获取二维码配置信息
 	 * @return QrcodeConfig
@@ -22,7 +22,7 @@ public interface QrcodeGenerator extends QrCodeExcutorClient {
 	 * @param logoPath logo地址
 	 * @return this
 	 */
-	QrcodeGenerator generate(String content, String logoPath);
+	ContextQrcodeExcutorClient generate(String content, String logoPath);
 
 	/**
 	 * 设置logo
@@ -30,7 +30,7 @@ public interface QrcodeGenerator extends QrCodeExcutorClient {
 	 * @param remote
 	 * @return this
 	 */
-	QrcodeGenerator setLogo(String path, boolean remote);
+	ContextQrcodeExcutorClient setLogo(String path, boolean remote);
 
 	/**
 	 * 获取二维码
@@ -39,11 +39,11 @@ public interface QrcodeGenerator extends QrCodeExcutorClient {
 	 */
 	BufferedImage getImage(boolean clear);
 
-	default QrcodeGenerator setLogo(String path) {
+	default ContextQrcodeExcutorClient setLogo(String path) {
 		return setLogo(path, false);
 	}
 
-	default QrcodeGenerator setRemoteLogo(String path) {
+	default ContextQrcodeExcutorClient setRemoteLogo(String path) {
 		return setLogo(path, true);
 	}
 

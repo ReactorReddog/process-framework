@@ -12,7 +12,7 @@ import java.awt.image.BufferedImage;
  * @desc <p>qrCode生成配置abstract类</p>
  * @since 1.0.0.RERLEASE
  */
-public abstract class AbstractQrCodeGenerator {
+public abstract class AbstractQrCodeContextQrcodeExcutorClient {
     /**
      * 颜色翻译
      * <p>Usage: getColor("#FFFFFF") or getColor("FFFFFF").</p>

@@ -2,16 +2,15 @@ package org.processframework.tools.test;
 
 import com.cn.processframework.tools.Codectx;
 import com.cn.processframework.tools.IOUtils;
-import com.cn.processframework.tools.qrcode.QrcodeGenerator;
+import com.cn.processframework.tools.qrcode.ContextQrcodeExcutorClient;
 import com.cn.processframework.tools.qrcode.QreyesFormat;
-import com.cn.processframework.tools.qrcode.SimpleQrcodeGenerator;
+import com.cn.processframework.tools.qrcode.SimpleQrcodeExcutorClient;
 import org.gradle.internal.impldep.org.junit.Assert;
 import org.gradle.internal.impldep.org.junit.Before;
 import org.junit.jupiter.api.Test;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -21,7 +20,7 @@ public class TestQrGen {
 
 	private static final String content = "https://www.aliyun.com/product/yunxiao/";
 
-	private QrcodeGenerator generator = new SimpleQrcodeGenerator();
+	private ContextQrcodeExcutorClient generator = new SimpleQrcodeExcutorClient();
 
 	private String localLogoPath;
 

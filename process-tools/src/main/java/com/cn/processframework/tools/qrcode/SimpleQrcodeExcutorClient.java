@@ -18,23 +18,23 @@ import java.io.OutputStream;
  * @desc 二维码简单实现
  * @since 1.0.0.RELEASE
  */
-public class SimpleQrcodeGenerator extends AbstractQrCodeGenerator implements QrcodeGenerator {
+public class SimpleQrcodeExcutorClient extends AbstractQrCodeContextQrcodeExcutorClient implements ContextQrcodeExcutorClient {
 
 	private static final ThreadQrcode QRCODE = new ThreadQrcode();
 
 	private final QrcodeConfig qrcodeConfig;
 
-	public SimpleQrcodeGenerator() {
+	public SimpleQrcodeExcutorClient() {
 		this(new QrcodeConfig());
 	}
 
-	public SimpleQrcodeGenerator(QrcodeConfig qrcodeConfig) {
+	public SimpleQrcodeExcutorClient(QrcodeConfig qrcodeConfig) {
 		super();
 		this.qrcodeConfig = qrcodeConfig;
 	}
 
 	@Override
-	public QrcodeGenerator setLogo(String path, boolean remote) {
+	public ContextQrcodeExcutorClient setLogo(String path, boolean remote) {
 		QRCODE.setLogo(path, remote);
 		return this;
 	}
@@ -45,14 +45,14 @@ public class SimpleQrcodeGenerator extends AbstractQrCodeGenerator implements Qr
 	}
 
 	@Override
-	public QrcodeGenerator generate(String content) {
+	public ContextQrcodeExcutorClient generate(String content) {
 		QRCODE.setImage(generateQrcode(getQrcodeConfig(), QRCODE.getLogo(), content));
 		return this;
 	}
 
 	@Override
-	public QrcodeGenerator generate(String content, String logoPath) {
-		return (QrcodeGenerator) setLogo(logoPath).generate(content);
+	public ContextQrcodeExcutorClient generate(String content, String logoPath) {
+		return (ContextQrcodeExcutorClient) setLogo(logoPath).generate(content);
 	}
 
 	@Override
