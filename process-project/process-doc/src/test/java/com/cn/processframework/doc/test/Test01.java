@@ -1,13 +1,16 @@
-package com.cn.processframework.doc;
+package com.cn.processframework.doc.test;
 
+import com.cn.processframework.doc.XmlUtils;
 import com.cn.processframework.doc.support.doc.DocInfoDate;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.io.StringWriter;
 
-public class Test {
-    public static void main(String[] args) throws IOException {
+public class Test01 {
+    @Test
+    public  void xx() throws IOException {
         DocInfoDate docInfoDate = new DocInfoDate();
         StringWriter s=new StringWriter();
         String b = new String();
