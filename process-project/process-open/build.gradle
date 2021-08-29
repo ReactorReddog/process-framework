@@ -4,7 +4,7 @@ plugins {
 
 group 'com.cn.processframework'
 version "${version}"
-description '第三方文档接口'
+description "process-framework-open"
 
 repositories {
     mavenCentral()
@@ -13,6 +13,8 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-    implementation "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.8.11"
-    implementation "org.springframework.boot:spring-boot-autoconfigure:${springBootAutoConfiureVersion}"
+}
+
+test {
+    useJUnitPlatform()
 }
