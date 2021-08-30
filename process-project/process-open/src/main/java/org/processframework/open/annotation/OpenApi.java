@@ -1,10 +1,15 @@
 package org.processframework.open.annotation;
 
+import java.lang.annotation.*;
+
 /**
  * @author apple
- * @desc 开放api
+ * @desc 开放api 接口层级
  * @since 1.0.0.RELEASE
  */
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
 public @interface OpenApi {
     /**
      * 接口名,例如:taobao.user.buyer.get

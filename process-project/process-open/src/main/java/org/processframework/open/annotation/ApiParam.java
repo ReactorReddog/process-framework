@@ -1,5 +1,9 @@
 package org.processframework.open.annotation;
 
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 import java.util.List;
 
 /**
@@ -7,12 +11,20 @@ import java.util.List;
  * @desc api接口请求参数
  * @since 1.0.0.RELEASE
  */
-public @interface ApiParams {
+@Target({ElementType.PARAMETER,ElementType.METHOD,ElementType.FIELD})
+@Retention(RetentionPolicy.RUNTIME)
+public @interface ApiParam {
     /**
      * 参数名称
      * @return
      */
     String name() default "";
+
+    /**
+     * 参数字段
+     * @return
+     */
+    String value() default "";
 
     /**
      * 当前参数类型
@@ -32,9 +44,4 @@ public @interface ApiParams {
      */
     String description() default "";
 
-    /**
-     * 子类参数
-     * @return
-     */
-    ApiOpration[] bizApiOprations() default {};
 }

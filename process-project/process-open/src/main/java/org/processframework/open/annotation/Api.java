@@ -1,10 +1,15 @@
 package org.processframework.open.annotation;
 
+import java.lang.annotation.*;
+
 /**
  * @author apple
- * @desc 请求类接口最顶层
+ * @desc 请求类接口 接口层级
  * @since 1.0.0.RELEASE
  */
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
 public @interface Api {
     /**
      * 中文名展示
