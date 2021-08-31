@@ -79,7 +79,7 @@ allprojects {
         implementation "com.alibaba:fastjson:${fastJsonVersion}"
         implementation "com.fasterxml.jackson.core:jackson-databind:${jacksonDataBindVersion}"
         implementation "io.spring.javaformat:spring-javaformat-gradle-plugin:${javaFormatVersion}"
-        implementation "org.springframework.boot:spring-boot-configuration-processor:${springBootAutoConfiureVersion}"
+        implementation "org.springframework.boot:spring-boot-configuration-processor:${springbootConfigurationProcess}"
     }
 }
 

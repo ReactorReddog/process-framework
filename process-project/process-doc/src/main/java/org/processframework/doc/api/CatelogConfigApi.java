@@ -16,7 +16,7 @@ public interface CatelogConfigApi {
      * @param treeId 树形id
      * @param docId 文档id
      * @param docType 文档类型
-     * @param tag 标签呢
+     * @param tag 标签
      * @return DocItemMenu
      */
     DocItemMenu getApiCateLogItemMenu(Long scopeId, Long treeId, Long docId, Long docType, String tag);

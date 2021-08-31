@@ -16,5 +16,13 @@ public class DocProperties {
     /**
      * 数据库配置
      */
-    DataSourceProperties dataSource;
+    private DataSourceProperties dataSource;
+    /**
+     * 沙箱地址
+     */
+    private String urlTest;
+    /**
+     * 正式访问地址
+     */
+    private String urlProd;
 }

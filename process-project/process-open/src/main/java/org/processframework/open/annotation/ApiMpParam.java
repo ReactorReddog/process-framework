@@ -11,7 +11,7 @@ import java.util.List;
  * @desc api接口请求参数 和ApiMpParams一起用
  * @since 1.0.0.RELEASE
  */
-@Target(ElementType.METHOD)
+@Target(ElementType.ANNOTATION_TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ApiMpParam {
     /**

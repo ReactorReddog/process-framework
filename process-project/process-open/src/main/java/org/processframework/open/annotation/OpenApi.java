@@ -7,7 +7,7 @@ import java.lang.annotation.*;
  * @desc 开放api 接口层级
  * @since 1.0.0.RELEASE
  */
-@Target(ElementType.METHOD)
+@Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface OpenApi {

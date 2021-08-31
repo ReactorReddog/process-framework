@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
  * @desc 请求参数多个
  * @since 1.0.0.RELEASE
  */
-@Target({ElementType.METHOD,ElementType.ANNOTATION_TYPE,ElementType.TYPE})
+@Target({ElementType.METHOD,ElementType.ANNOTATION_TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ApiMpParams {
     /**
