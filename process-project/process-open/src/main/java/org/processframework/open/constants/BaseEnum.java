@@ -1,4 +1,4 @@
-package org.processframework.doc.constants;
+package org.processframework.open.constants;
 
 /**
  * @author apple
