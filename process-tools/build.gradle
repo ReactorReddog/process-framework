@@ -12,6 +12,11 @@ dependencies {
     implementation "com.google.zxing:core:${zxingCoreVersion}"
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    implementation "cn.hutool:hutool-core:${hutoolCoreVersion}"
+    //电话号码相关
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.12.31'
+    implementation 'com.googlecode.libphonenumber:carrier:1.157'
+    implementation 'com.googlecode.libphonenumber:geocoder:2.167'
 }
 repositories {
     mavenCentral()
