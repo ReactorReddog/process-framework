@@ -1,5 +1,6 @@
 package org.processframework.open.properties;
 
+import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import static org.processframework.open.properties.OpenProperties.OPEN_PREFIX;
@@ -10,6 +11,7 @@ import static org.processframework.open.properties.OpenProperties.OPEN_PREFIX;
  * @since 1.0.0.RELEASE
  */
 @ConfigurationProperties(prefix = OPEN_PREFIX)
+@Data
 public class OpenProperties {
     /**
      * 前缀

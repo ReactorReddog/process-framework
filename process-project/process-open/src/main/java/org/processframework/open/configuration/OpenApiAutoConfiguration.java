@@ -27,6 +27,7 @@ public class OpenApiAutoConfiguration {
     @Bean
     @ConditionalOnMissingBean({OpenApiManageProcessor.class})
     public OpenApiManageProcessor openApiManageProcessor(){
-
+        log.info("===========开放系统初始化中===================");
+        return new OpenApiManageProcessor(openProperties.isEnabled());
     }
 }

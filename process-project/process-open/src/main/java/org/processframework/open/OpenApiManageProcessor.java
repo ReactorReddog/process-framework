@@ -21,7 +21,7 @@ public class OpenApiManageProcessor implements BeanPostProcessor {
      */
     private boolean enabled;
 
-    public void setEnabled(boolean enabled){
+    public OpenApiManageProcessor(boolean enabled){
         this.enabled = enabled;
     }
 
