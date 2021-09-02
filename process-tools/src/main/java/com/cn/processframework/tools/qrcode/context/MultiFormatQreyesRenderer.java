@@ -26,7 +26,6 @@ public final class MultiFormatQreyesRenderer implements QreyesRenderer {
 			case R2_BORDER_C_POINT -> new R2BCPQreyesRenderer();
 			case DR2_BORDER_R_POINT -> new DR2BRPQreyesRenderer();
 			case DR2_BORDER_C_POINT -> new DR2BCPQreyesRenderer();
-			default -> throw new IllegalArgumentException("No encoder available for format " + format);
 		};
 
 		renderer.render(image, format, position, slave, border, point);

@@ -90,10 +90,10 @@ public class SimpleQrcodeExcutorClient extends AbstractQrCodeContextQrcodeExcuto
 	}
 
 	/**
-	 * Generate implement.
-	 * @param config {@link QrcodeConfig}
-	 * @param logo {@link Qrcode.Logo}
-	 * @param content qrcode content
+	 * 生成二维码图片流
+	 * @param config {@link QrcodeConfig} 二维码配置
+	 * @param logo {@link Qrcode.Logo} logo地址
+	 * @param content qrcode content 二维码内容
 	 * @return BufferedImage instance
 	 */
 	private static BufferedImage generateQrcode(QrcodeConfig config, Qrcode.Logo logo, final String content) {

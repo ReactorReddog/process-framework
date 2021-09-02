@@ -1,5 +1,8 @@
 package com.cn.processframework.tools.qrcode.context;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 import java.awt.image.BufferedImage;
 import java.io.Serializable;
 
@@ -8,6 +11,7 @@ import java.io.Serializable;
  * @desc 二维码参数
  * @since 1.0.0.RELEASE
  */
+@Data
 public class Qrcode implements Serializable {
 	/**
 	 * 二维码
@@ -18,41 +22,15 @@ public class Qrcode implements Serializable {
 	 */
 	private Logo logo;
 
-	public BufferedImage getImage() {
-		return image;
-	}
-
-	public void setImage(BufferedImage image) {
-		this.image = image;
-	}
-
-	public Logo getLogo() {
-		return logo;
-	}
-
-	public void setLogo(Logo logo) {
-		this.logo = logo;
-	}
-
+	@Data
+	@AllArgsConstructor
 	public static final class Logo {
-
+		/**
+		 * logo路径
+		 */
 		private String path;
 
 		private boolean remote;
-
-		public Logo(String path, boolean remote) {
-			this.path = path;
-			this.remote = remote;
-		}
-
-		public String getPath() {
-			return path;
-		}
-
-		public boolean isRemote() {
-			return remote;
-		}
-
 	}
 
 }
