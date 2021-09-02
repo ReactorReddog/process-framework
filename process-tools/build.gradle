@@ -6,10 +6,10 @@ group 'com.cn.processframework'
 version "${version}"
 description "process-framework-tools"
 
-description( 'tools')
 dependencies {
     //添加二维码依赖
     implementation "com.google.zxing:core:${zxingCoreVersion}"
+    implementation "com.google.zxing:javase:${zxingCoreVersion}"
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
     api "cn.hutool:hutool-core:${hutoolCoreVersion}"
@@ -18,6 +18,10 @@ dependencies {
     implementation 'com.googlecode.libphonenumber:carrier:1.157'
     implementation 'com.googlecode.libphonenumber:geocoder:2.167'
     api "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:${jacksonVersion}"
+    api "org.apache.commons:commons-lang3:3.12.0"
+    implementation "com.google.guava:guava:30.1.1-jre"
+    implementation 'org.apache.httpcomponents:httpcore:4.4.14'
+    implementation 'org.apache.httpcomponents:fluent-hc:4.5.13'
 }
 repositories {
     mavenCentral()

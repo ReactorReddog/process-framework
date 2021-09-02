@@ -1,7 +1,7 @@
 package org.processframework.open.support.doc;
 
 import lombok.Data;
-import org.processframework.doc.constants.EnvConfigEnum;
+import org.processframework.open.constants.EnvConfigEnum;
 
 import java.io.Serializable;
 
