@@ -5,6 +5,7 @@ import com.google.zxing.EncodeHintType;
 import com.google.zxing.WriterException;
 import com.google.zxing.client.j2se.MatrixToImageConfig;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
+import lombok.SneakyThrows;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,14 +19,16 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by yihui on 2017/7/17.
+ * @author apple
+ * @desc 二维码生成工具类
+ * @since 1.0.0.RELEASE
  */
 public class QrCodeGenWrapper {
     public static Builder of(String content) {
         return new Builder().setMsg(content);
     }
 
-    private static ByteArrayOutputStream asGif(QrCodeOptions qrCodeOptions) throws WriterException {
+    private static ByteArrayOutputStream getGif(QrCodeOptions qrCodeOptions) throws WriterException {
         try {
             BitMatrixEx bitMatrix = QrCodeGenerateHelper.encode(qrCodeOptions);
             List<ImmutablePair<BufferedImage, Integer>> list =
@@ -38,7 +41,7 @@ public class QrCodeGenWrapper {
         }
     }
 
-    private static BufferedImage asBufferedImage(QrCodeOptions qrCodeOptions) throws WriterException, IOException {
+    private static BufferedImage getImage(QrCodeOptions qrCodeOptions) throws WriterException, IOException {
         try {
             BitMatrixEx bitMatrix = QrCodeGenerateHelper.encode(qrCodeOptions);
             return QrCodeGenerateHelper.toBufferedImage(qrCodeOptions, bitMatrix);
@@ -47,29 +50,37 @@ public class QrCodeGenWrapper {
         }
     }
 
-    private static String asString(QrCodeOptions qrCodeOptions) throws WriterException, IOException {
+    private static String toString(QrCodeOptions qrCodeOptions) throws WriterException, IOException {
         if (qrCodeOptions.gifQrCode()) {
             // 动态二维码生成
-            try (ByteArrayOutputStream outputStream = asGif(qrCodeOptions)) {
+            try (ByteArrayOutputStream outputStream = getGif(qrCodeOptions)) {
                 return Base64Util.encode(outputStream);
             }
         }
 
         // 普通二维码，直接输出图
-        BufferedImage bufferedImage = asBufferedImage(qrCodeOptions);
+        BufferedImage bufferedImage = getImage(qrCodeOptions);
         try (ByteArrayOutputStream outputStream = new ByteArrayOutputStream()) {
             ImageIO.write(bufferedImage, qrCodeOptions.getPicType(), outputStream);
             return Base64Util.encode(outputStream);
         }
     }
 
-    private static boolean asFile(QrCodeOptions qrCodeOptions, String absFileName) throws WriterException, IOException {
+    /**
+     * 直接导出文件到指定地址
+     * @param qrCodeOptions 二维码相关信息
+     * @param absFileName 文件地址
+     * @return
+     * @throws WriterException
+     * @throws IOException
+     */
+    private static boolean toFile(QrCodeOptions qrCodeOptions, String absFileName) throws WriterException, IOException {
         File file = new File(absFileName);
         FileWriteUtil.mkDir(file.getParentFile());
 
         if (qrCodeOptions.gifQrCode()) {
             // 保存动态二维码
-            try (ByteArrayOutputStream output = asGif(qrCodeOptions)) {
+            try (ByteArrayOutputStream output = getGif(qrCodeOptions)) {
                 FileOutputStream out = new FileOutputStream(file);
                 out.write(output.toByteArray());
                 out.flush();
@@ -79,9 +90,30 @@ public class QrCodeGenWrapper {
             return true;
         }
 
-        BufferedImage bufferedImage = asBufferedImage(qrCodeOptions);
+        BufferedImage bufferedImage = getImage(qrCodeOptions);
         if (!ImageIO.write(bufferedImage, qrCodeOptions.getPicType(), file)) {
             throw new IOException("save QrCode image to: " + absFileName + " error!");
+        }
+
+        return true;
+    }
+
+    private static boolean toStream(QrCodeOptions qrCodeOptions, OutputStream stream) throws WriterException, IOException {
+        if (qrCodeOptions.gifQrCode()) {
+            // 保存动态二维码
+            try (ByteArrayOutputStream output = getGif(qrCodeOptions)) {
+//                FileOutputStream out = new FileOutputStream(stream);
+                stream.write(output.toByteArray());
+                stream.flush();
+                stream.close();
+            }
+
+            return true;
+        }
+
+        BufferedImage bufferedImage = getImage(qrCodeOptions);
+        if (!ImageIO.write(bufferedImage, qrCodeOptions.getPicType(), stream)) {
+            throw new IOException("save QrCode image to: " + stream + " error!");
         }
 
         return true;
@@ -986,37 +1018,42 @@ public class QrCodeGenWrapper {
         }
 
 
-        public String asString() throws IOException, WriterException {
-            return QrCodeGenWrapper.asString(build());
+        @SneakyThrows
+        public String toString()  {
+            return QrCodeGenWrapper.toString(build());
         }
 
 
-        public BufferedImage asBufferedImage() throws IOException, WriterException {
-            return QrCodeGenWrapper.asBufferedImage(build());
+        public BufferedImage toBufferedImage() throws IOException, WriterException {
+            return QrCodeGenWrapper.getImage(build());
         }
 
-        public ByteArrayOutputStream asStream() throws WriterException, IOException {
+        public ByteArrayOutputStream toStream() throws WriterException, IOException {
             QrCodeOptions options = build();
             if (options.gifQrCode()) {
-                return QrCodeGenWrapper.asGif(options);
+                return QrCodeGenWrapper.getGif(options);
             } else {
-                BufferedImage img = QrCodeGenWrapper.asBufferedImage(options);
+                BufferedImage img = QrCodeGenWrapper.getImage(options);
                 ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
                 ImageIO.write(img, options.getPicType(), outputStream);
                 return outputStream;
             }
         }
 
-        public boolean asFile(String absFileName) throws IOException, WriterException {
-            return QrCodeGenWrapper.asFile(build(), absFileName);
+        public boolean toStream(OutputStream stream) throws IOException, WriterException {
+            QrCodeOptions options = build();
+            if (options.gifQrCode()) {
+                ByteArrayOutputStream gif = QrCodeGenWrapper.getGif(options);
+                //todo 2021-09-02
+            } else {
+                BufferedImage img = QrCodeGenWrapper.getImage(options);
+                return ImageIO.write(img, options.getPicType(), stream);
+            }
+            return false;
         }
 
-        @Override
-        public String toString() {
-            return "Builder{" + "msg='" + msg + '\'' + ", w=" + w + ", h=" + h + ", code='" + code + '\'' +
-                    ", padding=" + padding + ", errorCorrection=" + errorCorrection + ", picType='" + picType + '\'' +
-                    ", bgImgOptions=" + bgImgOptions + ", logoOptions=" + logoOptions + ", drawOptions=" + drawOptions +
-                    ", detectOptions=" + detectOptions + '}';
+        public boolean toFile(String absFileName) throws IOException, WriterException {
+            return QrCodeGenWrapper.toFile(build(), absFileName);
         }
     }
 }
