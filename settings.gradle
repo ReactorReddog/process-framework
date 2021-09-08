@@ -42,5 +42,4 @@ include 'process-boot'
 include 'process-starters:process-boot-starter-test'
 include 'process-project:process-open'
 include 'process-project:process-gateway-common'
-findProject(':process-project:process-gateway-common')?.name = 'process-gateway-common'
 
