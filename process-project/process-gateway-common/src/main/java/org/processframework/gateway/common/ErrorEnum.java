@@ -64,10 +64,7 @@ public enum ErrorEnum {
     //无效的签名类型 检查入参sign_type,目前只支持RSA,RSA2,HMAC_SHA1
     ISV_INVALID_SIGNATURE_TYPE(Codes.CODE_INVALID,"isv.invalid-signature-type"),
     //无效签名
-    //1.公私钥是否是一对
-    //2.检查公钥上传是否与私钥匹配
-    //3.存在中文需要做urlencode
-    //4.签名算法是否无误
+    //1.公私钥是否是一对 2.检查公钥上传是否与私钥匹配 3.存在中文需要做urlencode 4.签名算法是否无误
     ISV_INVALID_SIGNATURE(Codes.CODE_INVALID,"isv.invalid-signature"),
     //无效令牌 auth_token 为无效的令牌，请确认令牌有效
     ISV_INVALID_TOKEN(Codes.CODE_INVALID,"isv.invalid-token"),
@@ -100,8 +97,7 @@ public enum ErrorEnum {
     /************************40004业务处理失败*************************/
 
     /***********************40006权限不足********************/
-    //ISV 权限不足 请检查配置的账户是否有当前接口权限。
-    //请在 开发者中心 > 我的应用 找到对应的应用，在其 功能列表 中添加缺少的功能包、签约或申请必须的信息。详见 添加功能。
+    //ISV权限不足 请检查配置的账户是否有当前接口权限。请在 开发者中心 > 我的应用 找到对应的应用，在其 功能列表 中添加缺少的功能包、签约或申请必须的信息。详见 添加功能。
     ISV_INSUFFICIENT_ISV_PERMISSIONS(Codes.CODE_ISV_PERM,"isv.insufficient-isv-permissions"),
     //用户权限不足 代理的商户没有当前接口权限，ISV 可以选择让商户的应用自主添加功能后签约；或选择 代商户签约。
     ISV_INSUFFICIENT_USER_PERMISSIONS(Codes.CODE_ISV_PERM,"isv.insufficient-user-permissions"),

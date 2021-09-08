@@ -28,7 +28,7 @@ public class ErrorFactory {
     /**
      * i18n 路径
      */
-    private static final String I18N_OPEN_ERROR = "i18n/open/error";
+    private static final String I18N_OPEN_ERROR = "i18n/process/error";
     /**
      * 下划线连接
      */
@@ -36,15 +36,15 @@ public class ErrorFactory {
     /**
      * 模块缓存
      */
-    private static Set<String>noModuleCache = new HashSet<>();
+    private static final Set<String>noModuleCache = new HashSet<>();
     /**
      * 错误信息缓存
      */
-    private static Map<String,Error> errorCache = new HashMap<>(128);
+    private static final Map<String,Error> errorCache = new HashMap<>(128);
     /**
      * 初始化语言 默认采用英语和简体中文
      */
-    private static List<Locale> localeList = Arrays.asList(Locale.ENGLISH,Locale.SIMPLIFIED_CHINESE);
+    private static final List<Locale> localeList = Arrays.asList(Locale.ENGLISH,Locale.SIMPLIFIED_CHINESE);
     /**
      * 错误信息->国际化信息
      */
