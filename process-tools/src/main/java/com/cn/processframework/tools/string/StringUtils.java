@@ -783,7 +783,7 @@ public class StringUtils extends StrUtil {
 //        System.out.println(StringUtils.matchIp("qq.com"));
 //        System.out.println(StringUtils.matchIp("192.168.0.1"));
 //        System.out.println(StringUtils.assembledRedisKey(1,"2","4"));
-        System.out.println(StringUtils.toUnicode("成功"));
+        System.out.println(StringUtils.toUnicode("服务不可用"));
 //        System.out.println(StringUtils.formatMobile("15284531054"));
 //        System.out.println(StringUtils.checkPassword("521213.QQ.@aad"));
 //        System.out.println(matchHttpUrl("http://www.baidu.top"));
