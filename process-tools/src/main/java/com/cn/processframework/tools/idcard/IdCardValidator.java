@@ -1,4 +1,4 @@
-package com.cn.processframework.tools.validate;
+package com.cn.processframework.tools.idcard;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
