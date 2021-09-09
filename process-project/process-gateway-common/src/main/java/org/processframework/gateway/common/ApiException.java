@@ -11,14 +11,24 @@ import java.util.Objects;
 public class ApiException extends RuntimeException{
     private transient Error error;
 
-    private transient ErrorMeta errorMeta;
+    private final transient ErrorMeta errorMeta;
 
-    private Object[] params;
+    private final Object[] params;
 
     public ApiException(ErrorMeta errorMeta,Object... params){
         this.errorMeta = errorMeta;
         this.params = params;
     }
+
+    public ApiException(ErrorEnum errorEnum,Object... params){
+        this.errorMeta = errorEnum.getErrorMeta();
+        this.params = params;
+    }
+    public ApiException(ErrorEnum errorEnum){
+        this.errorMeta = errorEnum.getErrorMeta();
+        this.params = null;
+    }
+
 
     public ApiException(Throwable cause,ErrorMeta errorMeta,Object...params){
         super(cause);

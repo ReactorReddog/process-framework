@@ -11,9 +11,10 @@ import java.io.Serializable;
 public interface Param extends Serializable {
     /**
      * 获取接口名
-     * @return
+     * @return 返回接口名
      */
-    String getchName();
+    String fetchName();
+
     /**
      * 获取版本号
      * @return 返回版本号
