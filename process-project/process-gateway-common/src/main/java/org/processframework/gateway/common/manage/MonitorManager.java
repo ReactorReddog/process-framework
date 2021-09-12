@@ -1,4 +1,4 @@
-package org.processframework.gateway.common.manage.secret;
+package org.processframework.gateway.common.manage;
 
 import org.processframework.gateway.common.core.MonitorData;
 

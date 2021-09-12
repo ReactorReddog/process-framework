@@ -2,22 +2,20 @@ package org.processframework.gateway.common;
 
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.annotation.JSONField;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.Map;
 import java.util.UUID;
 
 /**
- * 客户端传来的参数放在这里.
- *
  * @author apple
+ * @desc 客户端传来的参数放在这里.
+ * @since 1.0.0.RELEASE
  */
+@NoArgsConstructor
 public class ApiParam extends JSONObject implements Param {
-
-
-    public ApiParam() {
-    }
-
     public ApiParam(Map<String, Object> map) {
         super(map);
     }
@@ -32,6 +30,11 @@ public class ApiParam extends JSONObject implements Param {
 
     private transient UploadContext uploadContext;
 
+    /**
+     * 构建apiParam
+     * @param map 参数
+     * @return
+     */
     public static ApiParam build(Map<String, ?> map) {
         ApiParam apiParam = new ApiParam();
         apiParam.putAll(map);

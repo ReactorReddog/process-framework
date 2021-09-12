@@ -5,10 +5,9 @@ import org.processframework.gateway.common.*;
 import org.processframework.gateway.common.context.DefaultRouteInterceptorContext;
 import org.processframework.gateway.common.context.EnvironmentKeys;
 import org.processframework.gateway.common.core.ForwardInfo;
-import org.processframework.gateway.common.properties.ProcessGatewayProperties;
+import org.processframework.gateway.common.properties.ApiConfigProperties;
 import org.processframework.gateway.common.route.GatewayForwardChooser;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.gateway.filter.factory.rewrite.CachedBodyOutputMessage;
 import org.springframework.cloud.gateway.support.BodyInserterContext;
 import org.springframework.core.Ordered;
@@ -30,8 +29,6 @@ import reactor.core.publisher.Mono;
 
 import javax.annotation.Resource;
 import java.net.URI;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Objects;
 
 import static org.processframework.gateway.common.constant.GatewayConstant.CACHE_ROUTE_INTERCEPTOR_CONTEXT;
@@ -47,7 +44,7 @@ public class IndexFilter implements WebFilter {
     @Autowired
     private ServerCodecConfigurer codecConfigurer;
     @Resource
-    private ProcessGatewayProperties gatewayProperties;
+    private ApiConfigProperties gatewayProperties;
 
     @Autowired
     private Validator validator;

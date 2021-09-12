@@ -22,9 +22,9 @@ import java.util.stream.Collectors;
 import static java.util.Collections.synchronizedMap;
 
 /**
- * 路由存储管理，负责动态更新路由
- *
  * @author apple
+ * @desc 路由存储管理，负责动态更新路由
+ * @since 1.0.0.RELEASE
  */
 @Slf4j
 public class GatewayRouteRepository implements RouteRepository<GatewayTargetRoute>, RouteLocator {

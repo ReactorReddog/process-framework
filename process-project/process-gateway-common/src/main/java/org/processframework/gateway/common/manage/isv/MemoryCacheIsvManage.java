@@ -1,4 +1,4 @@
-package org.processframework.gateway.common.manage.secret;
+package org.processframework.gateway.common.manage.isv;
 
 import org.processframework.gateway.common.core.IsvDefinition;
 import org.processframework.gateway.common.manage.Isv;

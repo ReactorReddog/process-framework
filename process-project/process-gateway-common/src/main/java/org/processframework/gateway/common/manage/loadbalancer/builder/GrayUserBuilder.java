@@ -1,4 +1,4 @@
-package org.processframework.gateway.common.manage.loadbalancer;
+package org.processframework.gateway.common.manage.loadbalancer.builder;
 
 import org.processframework.gateway.common.ApiParam;
 

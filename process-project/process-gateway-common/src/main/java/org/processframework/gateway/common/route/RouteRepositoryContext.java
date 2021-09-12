@@ -5,6 +5,8 @@ import org.processframework.gateway.common.manage.RouteRepository;
 
 /**
  * @author apple
+ * @desc 路由上下文
+ * @since 1.0.0.RELEASE
  */
 public class RouteRepositoryContext {
 

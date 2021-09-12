@@ -9,10 +9,12 @@ import org.processframework.gateway.common.excutor.*;
 import org.processframework.gateway.common.manage.*;
 import org.processframework.gateway.common.manage.base.*;
 import org.processframework.gateway.common.manage.formatter.ParameterFormatter;
-import org.processframework.gateway.common.manage.loadbalancer.GrayUserBuilder;
-import org.processframework.gateway.common.manage.secret.MemoryCacheIsvManage;
-import org.processframework.gateway.common.properties.ProcessGatewayProperties;
+import org.processframework.gateway.common.manage.loadbalancer.builder.GrayUserBuilder;
+import org.processframework.gateway.common.manage.isv.MemoryCacheIsvManage;
+import org.processframework.gateway.common.properties.ApiConfigProperties;
 import org.processframework.gateway.common.route.RouteInterceptor;
+import org.processframework.gateway.common.validate.Signer;
+import org.processframework.gateway.common.validate.alipay.AlipaySigner;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -103,7 +105,7 @@ public class ApiConfig {
     /**
      * 网关配置信息
      */
-    private ProcessGatewayProperties gatewayProperties;
+    private ApiConfigProperties gatewayProperties;
     /**
      * ISV路由权限信息
      */
@@ -136,5 +138,19 @@ public class ApiConfig {
      * 路由拦截器
      */
     private List<RouteInterceptor> routeInterceptors = new ArrayList<>(4);
+    /**
+     * 是否开启限流功能
+     */
+    private boolean openLimit = true;
+    private boolean useGateway;
+
+    /**
+     * 签名工具
+     */
+    private Signer signer = new AlipaySigner();
+    /**
+     * 获取监控数据
+     */
+    private MonitorManager monitorManager = new MonitorManager();
 
 }

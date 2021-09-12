@@ -1,8 +1,9 @@
-package org.processframework.gateway.common.manage.base;
+package org.processframework.gateway.common.manage.limit;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.IOUtils;
 import org.processframework.gateway.common.core.ConfigLimitDto;
+import org.processframework.gateway.common.manage.base.DefaultLimitManager;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;

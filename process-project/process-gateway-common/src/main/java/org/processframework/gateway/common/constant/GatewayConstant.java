@@ -58,4 +58,23 @@ public class GatewayConstant {
      *
      */
     public static final String METADATA_SERVER_CONTEXT_PATH_COMPATIBILITY = "context-path";
+    /**
+     * 预发布服务器key
+     */
+    public static final String METADATA_ENV_KEY = "env";
+    /**
+     * 预发布服务器value
+     */
+    public static final String METADATA_ENV_PRE_VALUE = "pre";
+    /**
+     * 是否是灰度发布服务器value
+     */
+    public static final String METADATA_ENV_GRAY_VALUE = "gray";
+    public static final String TARGET_SERVICE = "target-service";
+    public static final String RESTFUL_REQUEST = "restful-request";
+
+    public static final String PROCESS_ROUTES_PATH = "/process/route";
+
+    public static final String METADATA_PROCESS_ROUTES_PATH = "process.routes.path";
+
 }

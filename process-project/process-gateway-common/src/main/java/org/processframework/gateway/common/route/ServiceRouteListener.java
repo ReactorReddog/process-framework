@@ -13,15 +13,14 @@ import org.springframework.http.ResponseEntity;
 
 import java.util.Map;
 
+import static org.processframework.gateway.common.constant.GatewayConstant.METADATA_PROCESS_ROUTES_PATH;
+import static org.processframework.gateway.common.constant.GatewayConstant.PROCESS_ROUTES_PATH;
+
 /**
  * @author apple
  */
 @Slf4j
 public class ServiceRouteListener extends BaseServiceListener {
-
-    private static final String SOP_ROUTES_PATH = "/reddog/routes";
-
-    private static final String METADATA_SOP_ROUTES_PATH = "reddog.routes.path";
 
     @Autowired
     private GatewayRouteCache gatewayRouteCache;
@@ -76,7 +75,7 @@ public class ServiceRouteListener extends BaseServiceListener {
      */
     private String getRouteRequestUrl(InstanceDefinition instance) {
         Map<String, String> metadata = instance.getMetadata();
-        String customPath = metadata.get(METADATA_SOP_ROUTES_PATH);
+        String customPath = metadata.get(METADATA_PROCESS_ROUTES_PATH);
         String homeUrl;
         String servletPath;
         // 如果metadata中指定了获取路由的url
@@ -93,7 +92,7 @@ public class ServiceRouteListener extends BaseServiceListener {
             // 默认处理
             homeUrl = getHomeUrl(instance);
             String contextPath = this.getContextPath(metadata);
-            servletPath = contextPath + SOP_ROUTES_PATH;
+            servletPath = contextPath + PROCESS_ROUTES_PATH;
         }
         if (StringUtils.isNotBlank(servletPath) && !servletPath.startsWith("/")) {
             servletPath = '/' + servletPath;

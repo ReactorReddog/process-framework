@@ -18,6 +18,8 @@ import java.util.stream.Collectors;
 
 /**
  * @author apple
+ * @desc 网关路由本地缓存
+ * @since 1.0.0.RELEASE
  */
 @Slf4j
 public class GatewayRouteCache implements RouteLoader {

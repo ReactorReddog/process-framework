@@ -1,19 +1,19 @@
-package org.processframework.gateway.common.manage.loadbalancer;
+package org.processframework.gateway.common.manage.loadbalancer.builder;
 
 import org.processframework.gateway.common.ApiParam;
 
 /**
  * @author apple
  */
-public class AppIdGrayUserBuilder implements GrayUserBuilder {
-
+public class IpGrayUserBuilder implements GrayUserBuilder {
+    
     @Override
     public String buildGrayUserKey(ApiParam apiParam) {
-        return apiParam.fetchAppKey();
+        return apiParam.fetchIp();
     }
 
     @Override
     public int order() {
-        return 0;
+        return 1;
     }
 }

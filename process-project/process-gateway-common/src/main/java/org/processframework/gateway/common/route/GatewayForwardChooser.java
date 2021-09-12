@@ -9,6 +9,8 @@ import org.springframework.web.server.ServerWebExchange;
 
 /**
  * @author apple
+ * @desc 重定向
+ * @since 1.0.0.RELEASE
  */
 public class GatewayForwardChooser extends BaseForwardChooser<ServerWebExchange> {
 

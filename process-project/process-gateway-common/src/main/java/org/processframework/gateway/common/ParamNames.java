@@ -45,7 +45,7 @@ public class ParamNames {
     /** 返回sign名称 */
     public static String RESPONSE_SIGN_NAME = "sign";
 
-    public static String HEADER_VERSION_NAME = "reddog-version";
+    public static String HEADER_VERSION_NAME = "process-version";
 
 
 }

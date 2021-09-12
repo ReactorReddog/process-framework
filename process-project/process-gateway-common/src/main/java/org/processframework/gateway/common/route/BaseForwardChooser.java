@@ -2,11 +2,10 @@ package org.processframework.gateway.common.route;
 
 import org.processframework.gateway.common.ApiParam;
 import org.processframework.gateway.common.core.ApiConfig;
-import org.processframework.gateway.common.core.ApiContext;
 import org.processframework.gateway.common.core.ForwardInfo;
 import org.processframework.gateway.common.core.TargetRoute;
 import org.processframework.gateway.common.manage.EnvGrayManager;
-import org.processframework.gateway.common.manage.loadbalancer.GrayUserBuilder;
+import org.processframework.gateway.common.manage.loadbalancer.builder.GrayUserBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
