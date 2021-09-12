@@ -208,81 +208,6 @@ public class BeanUtil extends org.springframework.beans.BeanUtils {
 	}
 
 	/**
-	 * 拷贝对象并对不同类型属性进行转换
-	 *
-	 * <p>
-	 * 支持 map bean copy
-	 * </p>
-	 *
-	 * @param source 源对象
-	 * @param targetClazz 转换成的类
-	 * @param <T>    泛型标记
-	 * @return T
-	 */
-	@Nullable
-	public static <T> T copyWithConvert(@Nullable Object source, Class<T> targetClazz) {
-		if (source == null) {
-			return null;
-		}
-		return BeanUtil.copyWithConvert(source, source.getClass(), targetClazz);
-	}
-
-	/**
-	 * 拷贝对象并对不同类型属性进行转换
-	 *
-	 * <p>
-	 * 支持 map bean copy
-	 * </p>
-	 *
-	 * @param source 源对象
-	 * @param sourceClazz 源类
-	 * @param targetClazz 转换成的类
-	 * @param <T>    泛型标记
-	 * @return T
-	 */
-	@Nullable
-	public static <T> T copyWithConvert(@Nullable Object source, Class<?> sourceClazz, Class<T> targetClazz) {
-		if (source == null) {
-			return null;
-		}
-		ProcessBeanCopier copier = ProcessBeanCopier.create(sourceClazz, targetClazz, true);
-		T to = newInstance(targetClazz);
-		copier.copy(source, to, new ProcessConverter(sourceClazz, targetClazz));
-		return to;
-	}
-
-	/**
-	 * 拷贝列表并对不同类型属性进行转换
-	 *
-	 * <p>
-	 * 支持 map bean copy
-	 * </p>
-	 *
-	 * @param sourceList 源对象列表
-	 * @param targetClazz 转换成的类
-	 * @param <T>    泛型标记
-	 * @return List
-	 */
-	public static <T> List<T> copyWithConvert(@Nullable Collection<?> sourceList, Class<T> targetClazz) {
-		if (sourceList == null || sourceList.isEmpty()) {
-			return Collections.emptyList();
-		}
-		List<T> outList = new ArrayList<>(sourceList.size());
-		Class<?> sourceClazz = null;
-		for (Object source : sourceList) {
-			if (source == null) {
-				continue;
-			}
-			if (sourceClazz == null) {
-				sourceClazz = source.getClass();
-			}
-			T bean = BeanUtil.copyWithConvert(source, sourceClazz, targetClazz);
-			outList.add(bean);
-		}
-		return outList;
-	}
-
-	/**
 	 * Copy the property values of the given source bean into the target class.
 	 * <p>Note: The source and target classes do not have to match or even be derived
 	 * from each other, as long as the properties match. Any bean properties that the
@@ -332,21 +257,6 @@ public class BeanUtil extends org.springframework.beans.BeanUtils {
 		}
 		return outList;
 	}
-
-	/**
-	 * 将对象装成map形式
-	 *
-	 * @param bean 源对象
-	 * @return {Map}
-	 */
-	@SuppressWarnings("unchecked")
-	public static Map<String, Object> toMap(@Nullable Object bean) {
-		if (bean == null) {
-			return new HashMap<>(0);
-		}
-		return ProcessBeanMap.create(bean);
-	}
-
 	/**
 	 * 将map 转为 bean
 	 *
@@ -363,41 +273,6 @@ public class BeanUtil extends org.springframework.beans.BeanUtils {
 		}
 		BeanUtil.copy(beanMap, to);
 		return to;
-	}
-
-	/**
-	 * 给一个Bean添加字段
-	 *
-	 * @param superBean 父级Bean
-	 * @param props     新增属性
-	 * @return {Object}
-	 */
-	@Nullable
-	public static Object generator(@Nullable Object superBean, BeanProperty... props) {
-		if (superBean == null) {
-			return null;
-		}
-		Class<?> superclass = superBean.getClass();
-		Object genBean = generator(superclass, props);
-		BeanUtil.copy(superBean, genBean);
-		return genBean;
-	}
-
-	/**
-	 * 给一个class添加字段
-	 *
-	 * @param superclass 父级
-	 * @param props      新增属性
-	 * @return {Object}
-	 */
-	public static Object generator(Class<?> superclass, BeanProperty... props) {
-		BeanGenerator generator = new BeanGenerator();
-		generator.setSuperclass(superclass);
-		generator.setUseCache(true);
-		for (BeanProperty prop : props) {
-			generator.addProperty(prop.getName(), prop.getType());
-		}
-		return generator.create();
 	}
 
 }
