@@ -5,10 +5,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.BooleanUtils;
 import org.processframework.gateway.common.core.*;
-import org.processframework.gateway.common.manage.IPBlacklistManager;
-import org.processframework.gateway.common.manage.IsvManager;
-import org.processframework.gateway.common.manage.IsvRoutePermissionManager;
+import org.processframework.gateway.common.manage.*;
 import org.processframework.gateway.common.route.RouteRepositoryContext;
+import org.processframework.gateway.common.validate.Signer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.util.StringUtils;
@@ -112,7 +111,7 @@ public class ApiValidator implements Validator {
         // 检查路由是否启用
         RouteConfig routeConfig = routeConfigManager.get(routeId);
         if (!routeConfig.enable()) {
-            throw ErrorEnum.ISP_API_DISABLED.getErrorMeta().getException();
+            throw ErrorEnum.ISV_NOT_SUPPORT_APP_AUTH.getErrorMeta().getException();
         }
         return targetRoute;
     }
@@ -187,7 +186,7 @@ public class ApiValidator implements Validator {
         try {
             Date requestDate = new SimpleDateFormat(ParamNames.TIMESTAMP_PATTERN).parse(requestTime);
             long requestMilliseconds = requestDate.getTime();
-            if (System.currentTimeMillis() - requestMilliseconds > timeoutSeconds * MILLISECOND_OF_ONE_SECOND) {
+            if (System.currentTimeMillis() - requestMilliseconds > (long) timeoutSeconds * MILLISECOND_OF_ONE_SECOND) {
                 throw ErrorEnum.ISV_INVALID_TIMESTAMP.getErrorMeta().getException();
             }
         } catch (ParseException e) {
@@ -206,7 +205,7 @@ public class ApiValidator implements Validator {
         }
         // 禁止访问
         if (isv.getStatus() == null || isv.getStatus() == STATUS_FORBIDDEN) {
-            throw ErrorEnum.ISV_ACCESS_FORBIDDEN.getErrorMeta().getException();
+            throw ErrorEnum.ISV_INSUFFICIENT_USER_PERMISSIONS.getErrorMeta().getException();
         }
     }
 
@@ -258,7 +257,7 @@ public class ApiValidator implements Validator {
             String appKey = apiParam.fetchAppKey();
             boolean hasPermission = isvRoutePermissionManager.hasPermission(appKey, routeId);
             if (!hasPermission) {
-                throw ErrorEnum.ISV_ROUTE_NO_PERMISSIONS.getErrorMeta().getException();
+                throw ErrorEnum.ISV_INSUFFICIENT_ISV_PERMISSIONS.getErrorMeta().getException();
             }
         }
     }

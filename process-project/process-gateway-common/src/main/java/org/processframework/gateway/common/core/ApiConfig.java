@@ -73,6 +73,12 @@ public class ApiConfig {
     private IsvManager<IsvDefinition>isvManager =new MemoryCacheIsvManage();
 
     /**
+     * 是否对结果进行合并。<br>
+     * 默认情况下是否合并结果由微服务端决定，一旦指定该值，则由该值决定，不管微服务端如何设置。
+     */
+    private Boolean mergeResult;
+
+    /**
      * gateway合并结果处理
      */
     private ResultExecutorForGateway gatewayResultExecutor = new GatewayResultExecutor();
@@ -152,5 +158,8 @@ public class ApiConfig {
      * 获取监控数据
      */
     private MonitorManager monitorManager = new MonitorManager();
-
+    /**
+     * 超时时间
+     */
+    private int timeoutSeconds = 60 * 5;
 }

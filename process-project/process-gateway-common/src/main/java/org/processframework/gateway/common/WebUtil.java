@@ -8,6 +8,9 @@ import com.google.common.base.Charsets;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.io.IOUtils;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -474,7 +477,7 @@ public class WebUtil extends org.springframework.web.util.WebUtils {
 			List<FileItem> fileItems = upload.parseRequest(request);
 			for (FileItem fileItem : fileItems) {
 				if (fileItem.isFormField()) {
-					uploadParams.put(fileItem.getFieldName(), fileItem.getString(ReddogConstants.UTF8));
+					uploadParams.put(fileItem.getFieldName(), fileItem.getString(UTF8));
 				} else {
 					multipartFileList.add(new CommonsMultipartFile(fileItem));
 				}
