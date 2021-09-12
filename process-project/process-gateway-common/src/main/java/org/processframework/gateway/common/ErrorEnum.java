@@ -12,9 +12,11 @@ public enum ErrorEnum {
 
     /****************20000 服务不可用****************/
     //服务暂不可用（业务系统不可用） 稍后重试
-    ISP_UNKNOW_ERROR(Codes.CODE_UNKNOWN,"isp.unknow-error"),
+    ISP_UNKNOWN_ERROR(Codes.CODE_UNKNOWN,"isp.unknown-error"),
     //服务暂不可用（网关自身的未知错误） 稍后重试
-    AOP_UNKNOW_ERROR(Codes.CODE_UNKNOWN,"aop.unknow-error"),
+    AOP_UNKNOWN_ERROR(Codes.CODE_UNKNOWN,"aop.unknown-error"),
+    //响应式超时
+    ISP_GATEWAY_RESPONSE_TIMEOUT(Codes.CODE_UNKNOWN, "isp.gateway-response-timeout"),
 
     /*************20001授权权限不足************/
     //无效的访问令牌 请刷新授权令牌或重新授权获取新的令牌
@@ -101,6 +103,8 @@ public enum ErrorEnum {
     ISV_INSUFFICIENT_ISV_PERMISSIONS(Codes.CODE_ISV_PERM,"isv.insufficient-isv-permissions"),
     //用户权限不足 代理的商户没有当前接口权限，ISV 可以选择让商户的应用自主添加功能后签约；或选择 代商户签约。
     ISV_INSUFFICIENT_USER_PERMISSIONS(Codes.CODE_ISV_PERM,"isv.insufficient-user-permissions"),
+    /** 禁止IP访问 */
+    ISV_IP_FORBIDDEN(Codes.CODE_ISV_PERM, "isv.ip-forbidden"),
 
     /****************************40005Call Limited（调用频次超限）**************************/
     //应用调用次数超限，包含调用频率超限 降低请求并发量

@@ -3,7 +3,6 @@ package org.processframework.gateway.common;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.annotation.JSONField;
 import org.apache.commons.lang3.StringUtils;
-import org.gradle.internal.impldep.com.amazonaws.services.s3.transfer.UploadContext;
 
 import java.util.Map;
 import java.util.UUID;

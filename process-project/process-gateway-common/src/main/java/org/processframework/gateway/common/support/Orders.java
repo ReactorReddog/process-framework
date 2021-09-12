@@ -4,7 +4,7 @@ import org.springframework.core.Ordered;
 
 /**
  * @author apple
- * @desc 优先级别控制
+ * @desc 网关过滤器优先级别控制
  * @since 1.0.0.RELEASE
  */
 public class Orders {

@@ -10,7 +10,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 /**
  * @author apple
@@ -746,6 +745,17 @@ public class StringUtils extends StrUtil {
             return str.concat(otherwise);
         }
         return str.concat(appendStr);
+    }
+    /**
+     * 创建StringBuilder对象
+     *
+     * @param sb   初始StringBuilder
+     * @param strs 初始字符串列表
+     */
+    public static void appendBuilder(StringBuilder sb, CharSequence... strs) {
+        for (CharSequence str : strs) {
+            sb.append(str);
+        }
     }
 
     /**
