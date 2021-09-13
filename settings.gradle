@@ -42,4 +42,6 @@ include 'process-boot'
 include 'process-starters:process-boot-starter-test'
 include 'process-project:process-open'
 include 'process-project:process-gateway-common'
+include 'process-project:process-brige-nacos'
+findProject(':process-project:process-brige-nacos')?.name = 'process-brige-nacos'
 

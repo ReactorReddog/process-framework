@@ -77,4 +77,7 @@ public class GatewayConstant {
 
     public static final String METADATA_PROCESS_ROUTES_PATH = "process.routes.path";
 
+    public static final String METADATA_KEY_TIME_STARTUP = "server.startup-time";
+
+
 }
