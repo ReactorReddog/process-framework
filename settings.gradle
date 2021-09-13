@@ -44,4 +44,6 @@ include 'process-project:process-open'
 include 'process-project:process-gateway-common'
 include 'process-project:process-brige-nacos'
 findProject(':process-project:process-brige-nacos')?.name = 'process-brige-nacos'
+include 'process-project:process-service-common'
+findProject(':process-project:process-service-common')?.name = 'process-service-common'
 
