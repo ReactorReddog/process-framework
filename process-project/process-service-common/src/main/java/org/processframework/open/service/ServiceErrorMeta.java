@@ -19,14 +19,5 @@ public class ServiceErrorMeta {
         return ServiceErrorFactory.getError(this, ServiceContext.getCurrentContext().getLocale());
     }
 
-    /**
-     * 返回网关exception
-     *
-     * @param params 参数
-     * @return 返回exception
-     */
-    public ServiceException getException(Object... params) {
-        ServiceError error = ServiceErrorFactory.getError(this, ServiceContext.getCurrentContext().getLocale(), params);
-        return new ServiceException(error);
-    }
+
 }
