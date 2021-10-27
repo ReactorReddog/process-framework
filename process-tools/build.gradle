@@ -24,9 +24,3 @@ dependencies {
     implementation 'org.apache.httpcomponents:fluent-hc:4.5.13'
     implementation "org.springframework:spring-beans:5.3.9"
 }
-repositories {
-    mavenCentral()
-}
-test {
-    useJUnitPlatform()
-}
