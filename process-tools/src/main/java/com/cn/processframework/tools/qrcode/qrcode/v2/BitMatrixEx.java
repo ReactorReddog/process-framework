@@ -6,7 +6,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 扩展二维码矩阵信息 新增三个位置探测图形的判定
  * @since 1.0.0.RELEASE
  */

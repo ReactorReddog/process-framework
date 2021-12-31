@@ -12,7 +12,7 @@ import com.cn.processframework.pay.PayService;
 import com.cn.processframework.pay.support.paypal.PayPalConfigStorage;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 贝宝商户信息列表
  * @since 1.0 23:50
  */

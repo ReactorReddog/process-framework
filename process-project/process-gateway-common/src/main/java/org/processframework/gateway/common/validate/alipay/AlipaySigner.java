@@ -6,7 +6,7 @@ import org.processframework.gateway.common.ErrorEnum;
 import org.processframework.gateway.common.validate.Signer;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 支付宝签名验证实现。
  * @see <a href="https://docs.open.alipay.com/291/106118">支付宝签名</a>
  */

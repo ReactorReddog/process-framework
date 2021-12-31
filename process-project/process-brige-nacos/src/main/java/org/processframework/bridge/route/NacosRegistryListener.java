@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 import static org.processframework.gateway.common.constant.GatewayConstant.METADATA_KEY_TIME_STARTUP;
 
 /**
- * @author apple
+ * @author apple 
  * @desc nacos注册监听包含服务拉去等
  * @since 1.0.0.RELEASE
  */

@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 /**
- * @author apple
+ * @author apple 
  * @see <a href="https://blog.csdn.net/seashouwang/article/details/80299571"></a>
  * @desc 网关环境类
  * @since 1.0.0.RELEASE

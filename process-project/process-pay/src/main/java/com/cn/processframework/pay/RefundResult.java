@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.Map;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 基础退款结果对象接口
  * @since 1.0 14:23
  */

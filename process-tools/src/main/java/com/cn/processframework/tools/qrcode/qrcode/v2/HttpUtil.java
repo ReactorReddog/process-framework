@@ -38,7 +38,7 @@ public class HttpUtil {
             if (StringUtils.isNotEmpty(httpHost.getHostName())) {
                 request.setHeader("Host", httpHost.getHostName());
             }
-            request.addHeader("user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36");
+            request.addHeader("user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) apple WebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36");
 
             httpResponse = request.execute().returnResponse();
         } catch (Exception e) {

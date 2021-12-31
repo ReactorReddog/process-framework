@@ -6,7 +6,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import static org.processframework.doc.properties.DocProperties.PREFIX;
 
 /**
- * @author apple
+ * @author apple 
  * @desc doc配置
  * @since 1.0.0.RELEASE
  */

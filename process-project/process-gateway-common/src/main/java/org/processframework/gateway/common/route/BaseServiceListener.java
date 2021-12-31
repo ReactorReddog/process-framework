@@ -6,7 +6,7 @@ import org.springframework.web.client.DefaultResponseErrorHandler;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author apple
+ * @author apple 
  * @desc
  * @since
  */

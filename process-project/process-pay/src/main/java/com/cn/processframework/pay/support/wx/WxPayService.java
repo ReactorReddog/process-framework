@@ -17,7 +17,7 @@ import static com.cn.processframework.pay.support.wx.WxConst.*;
 import static com.cn.processframework.pay.support.wx.WxTransferType.*;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 微信支付服务
  * @since 1.0 22:04
  */

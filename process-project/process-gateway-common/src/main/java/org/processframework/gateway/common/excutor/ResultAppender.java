@@ -5,7 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import java.util.Map;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 对结果进行追加
  * @since 1.0.0.RELEASE
  */

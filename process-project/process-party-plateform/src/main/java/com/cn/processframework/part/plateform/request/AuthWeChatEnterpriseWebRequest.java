@@ -12,7 +12,7 @@ import com.cn.processframework.part.plateform.UrlBuilder;
  * 企业微信网页登录
  * </p>
  *
- * @author apple
+ * @author apple 
  * @since 1.0.1
  */
 public class AuthWeChatEnterpriseWebRequest extends AbstractAuthWeChatEnterpriseRequest {

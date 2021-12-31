@@ -20,7 +20,7 @@ import com.cn.processframework.part.plateform.UrlBuilder;
 /**
  * 微信公众平台登录
  *
- * @author apple
+ * @author apple 
  * @since 1.1.0
  */
 public class AuthWeChatMpRequest extends AuthDefaultRequest {

@@ -25,7 +25,7 @@ import static org.processframework.gateway.common.ErrorEnum.*;
 import static org.processframework.gateway.common.constant.GatewayConstant.EMPTY_JSON;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 处理微服务中结果返回
  * @param <T>
  * @param <R>

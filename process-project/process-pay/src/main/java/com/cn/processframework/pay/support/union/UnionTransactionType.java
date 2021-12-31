@@ -17,13 +17,13 @@ public enum UnionTransactionType implements TransactionType {
      * 苹果支付
      * 官方文档：https://open.unionpay.com/tjweb/acproduct/list?apiservId=460
      */
-    APPLE_PAY("01","01","000802","08"),
+    apple _PAY("01","01","000802","08"),
     /**
      * 手机控件
      */
     APP("01","01","000000","08"),
     /**
-     * 手机控件支付产品(安卓/IOS/ApplePay 对应后台)
+     * 手机控件支付产品(安卓/IOS/apple Pay 对应后台)
      * 官方文档：https://open.unionpay.com/tjweb/acproduct/list?apiservId=450
      */
     WAP("01","01","000201","08"),

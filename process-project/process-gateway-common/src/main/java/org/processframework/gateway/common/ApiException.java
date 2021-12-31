@@ -4,7 +4,7 @@ import java.util.Locale;
 import java.util.Objects;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 异常类
  * @since 1.0.0.RELEASE
  */

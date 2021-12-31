@@ -6,7 +6,7 @@ import com.cn.processframework.pay.TransferType;
 import java.util.Map;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 微信转账类型
  * @since 1.0 22:02
  */

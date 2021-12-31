@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 二维码配置
  */
 public class QrcodeConfig extends GenericCodeConfig {

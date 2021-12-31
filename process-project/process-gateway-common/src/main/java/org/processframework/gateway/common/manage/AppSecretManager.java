@@ -3,7 +3,7 @@ package org.processframework.gateway.common.manage;
 import java.util.Map;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 负责秘钥管理
  */
 public interface AppSecretManager {

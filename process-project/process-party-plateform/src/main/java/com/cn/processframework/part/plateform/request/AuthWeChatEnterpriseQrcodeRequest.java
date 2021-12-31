@@ -9,7 +9,7 @@ import com.cn.processframework.part.plateform.UrlBuilder;
  * 企业微信二维码登录
  * </p>
  *
- * @author apple
+ * @author apple 
  * @desc 重构该类，将通用方法提取
  * @since 1.10.0
  */

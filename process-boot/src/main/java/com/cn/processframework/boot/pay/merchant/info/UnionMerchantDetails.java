@@ -15,7 +15,7 @@ import com.cn.processframework.pay.support.union.UnionPayConfigStorage;
 import java.io.InputStream;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 银联商户信息列表
  * @since 1.0 23:50
  */

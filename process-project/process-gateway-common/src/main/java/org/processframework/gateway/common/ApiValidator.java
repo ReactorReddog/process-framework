@@ -24,7 +24,7 @@ import java.util.List;
 /**
  * 负责校验,校验工作都在这里
  *
- * @author apple
+ * @author apple 
  */
 @Slf4j
 @Getter

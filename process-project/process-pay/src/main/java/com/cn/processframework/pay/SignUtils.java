@@ -212,7 +212,7 @@ public enum SignUtils implements SignType {
             Arrays.sort(ignoreKey);
         }
         StringBuffer sb = new StringBuffer();
-        // TODO 2020/11/11 10:14 author: apple 已经排序好处理
+        // TODO 2020/11/11 10:14 author: apple  已经排序好处理
         if (parameters instanceof SortedMap) {
             for (Map.Entry<String, Object> entry :  parameters.entrySet()) {
                 Object v = entry.getValue();
@@ -239,7 +239,7 @@ public enum SignUtils implements SignType {
 
     private static String sortMapParameterText(Map<String, Object> parameters, String separator, boolean ignoreNullValue, String... ignoreKey) {
         StringBuffer sb = new StringBuffer();
-        // TODO 2020/11/11 10:14 author: apple 未排序须处理
+        // TODO 2020/11/11 10:14 author: apple  未排序须处理
         List<String> keys = new ArrayList<String>(parameters.keySet());
         //排序
         Collections.sort(keys);

@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 微博平台 OAuth 授权范围
  * @since 1.0 22:09
  */

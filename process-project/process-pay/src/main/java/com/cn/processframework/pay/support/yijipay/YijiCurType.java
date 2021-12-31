@@ -3,7 +3,7 @@ package com.cn.processframework.pay.support.yijipay;
 import com.cn.processframework.pay.CurType;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 币种
  * @since 1.0 22:24
  */

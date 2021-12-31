@@ -5,7 +5,7 @@ import org.processframework.gateway.common.core.IsvRoutePermission;
 import org.processframework.gateway.common.manage.initalizer.BeanInitializer;
 
 /**
- * @author apple
+ * @author apple 
  * @desc isv路由权限管理
  * @since 1.0.0.RELEASE
  */

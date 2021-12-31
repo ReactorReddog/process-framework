@@ -25,7 +25,7 @@ import static com.cn.processframework.part.plateform.configuration.AuthDefaultSo
 /**
  * 人人登录
  *
- * @author apple
+ * @author apple 
  * @since 1.0 22:31
  */
 public class AuthRenrenRequest extends AuthDefaultRequest {

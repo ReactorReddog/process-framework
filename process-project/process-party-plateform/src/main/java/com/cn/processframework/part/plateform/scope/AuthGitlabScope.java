@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * @author apple
+ * @author apple 
  * @desc Gitlab 平台 OAuth 授权范围
  * @since 1.0 21:59
  */

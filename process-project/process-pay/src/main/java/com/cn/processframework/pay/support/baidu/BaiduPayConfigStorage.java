@@ -3,7 +3,7 @@ package com.cn.processframework.pay.support.baidu;
 import com.cn.processframework.pay.BasePayConfigStorage;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 百度支付配置
  * @since 1.0 20:49
  */

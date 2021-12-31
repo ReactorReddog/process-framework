@@ -5,7 +5,7 @@ import lombok.*;
 import java.io.Serializable;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 授权认证所需的token
  * @since 1.0 21:16
  */

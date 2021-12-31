@@ -16,7 +16,7 @@ package org.processframework.open.service;
  * app_auth_token	String	否	    40	    详见应用授权概述
  * biz_content	    String	是		        请求参数的集合，最大长度不限，除公共参数外所有请求参数都必须放在这个参数中传递，具体参照各产品快速接入文档
  *
- * @author apple
+ * @author apple 
  */
 public class ParamNames {
     /** 分配给开发者的应用ID */

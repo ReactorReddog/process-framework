@@ -25,7 +25,7 @@ import static java.util.Collections.emptyMap;
 import static org.springframework.util.StringUtils.*;
 
 /**
- * @author apple
+ * @author apple 
  */
 public class RequestContentDataExtractor {
 	public static MultiValueMap<String, Object> extract(HttpServletRequest request) throws IOException {

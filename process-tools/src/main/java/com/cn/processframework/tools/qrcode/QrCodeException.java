@@ -1,7 +1,7 @@
 package com.cn.processframework.tools.qrcode;
 
 /**
- * @author apple
+ * @author apple 
  * @package com.cn.processframework.tools
  * @desc <p>二维码异常处理</p>
  * @since 1.0.0.RELEASE

@@ -10,7 +10,7 @@ import com.cn.processframework.part.plateform.AuthCallback;
 import com.cn.processframework.part.plateform.AuthToken;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 阿里云登录
  * @since 1.0 22:13
  */

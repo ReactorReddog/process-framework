@@ -3,7 +3,7 @@ package org.processframework.gateway.common.validate;
 import org.processframework.gateway.common.ApiParam;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 负责签名校验
  */
 public interface Signer {

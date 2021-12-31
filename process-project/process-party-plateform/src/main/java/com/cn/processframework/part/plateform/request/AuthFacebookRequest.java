@@ -14,7 +14,7 @@ import com.cn.processframework.part.plateform.AuthScopeUtils;
 import com.cn.processframework.part.plateform.UrlBuilder;
 
 /**
- * @author apple
+ * @author apple 
  * @desc Facebook登录
  * @since 1.0 22:24
  */

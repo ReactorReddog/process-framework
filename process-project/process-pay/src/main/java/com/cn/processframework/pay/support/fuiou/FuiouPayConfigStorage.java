@@ -3,7 +3,7 @@ package com.cn.processframework.pay.support.fuiou;
 import com.cn.processframework.pay.BasePayConfigStorage;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 富友支付配置
  * @since 1.0 21:04
  */

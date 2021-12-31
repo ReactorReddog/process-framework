@@ -10,7 +10,7 @@ import java.nio.charset.StandardCharsets;
 
 /**
  *
- * @author apple
+ * @author apple 
  * @desc AES-128 ECB加密.<br>
  * <pre>
  * 字符集:UTF-8

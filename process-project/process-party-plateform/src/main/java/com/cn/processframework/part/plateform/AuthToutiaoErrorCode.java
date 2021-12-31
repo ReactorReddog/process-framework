@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 今日头条授权登录时的异常状态码
  * @since 1.0 21:51
  */

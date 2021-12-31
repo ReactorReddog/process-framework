@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.UUID;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 客户端传来的参数放在这里.
  * @since 1.0.0.RELEASE
  */

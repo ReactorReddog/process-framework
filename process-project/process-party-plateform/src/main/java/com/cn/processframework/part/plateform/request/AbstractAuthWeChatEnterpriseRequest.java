@@ -14,7 +14,7 @@ import com.cn.processframework.part.plateform.HttpUtils;
 import com.cn.processframework.part.plateform.UrlBuilder;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 企业微信登录父类
  * @since 1.0 22:10
  */

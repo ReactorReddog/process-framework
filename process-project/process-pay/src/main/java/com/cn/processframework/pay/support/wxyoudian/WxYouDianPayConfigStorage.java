@@ -6,7 +6,7 @@ import com.cn.processframework.pay.BasePayConfigStorage;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 支付客户端配置存储
  * @since 1.0 22:18
  */

@@ -1,7 +1,7 @@
 package com.cn.processframework.tools.qrcode.context;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 二维码码眼样式控制
  * @since 1.0.0.RELEASE
  */

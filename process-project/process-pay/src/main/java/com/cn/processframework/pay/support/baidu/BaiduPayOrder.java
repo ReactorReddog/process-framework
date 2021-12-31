@@ -12,7 +12,7 @@ import static com.cn.processframework.pay.support.baidu.BaiduPayService.BIZ_INFO
 import static com.cn.processframework.pay.support.baidu.BaiduPayService.SIGN_FIELDS_RANGE;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 百度订单支付
  * @since 1.0 20:45
  */

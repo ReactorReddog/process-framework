@@ -16,7 +16,7 @@ import com.cn.processframework.part.plateform.UrlBuilder;
 /**
  * 淘宝登录
  *
- * @author apple
+ * @author apple 
  * @since 1.1.0
  */
 public class AuthTaobaoRequest extends AuthDefaultRequest {

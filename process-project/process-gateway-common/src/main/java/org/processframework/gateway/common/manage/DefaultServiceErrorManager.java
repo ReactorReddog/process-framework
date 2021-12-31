@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @author apple
+ * @author apple 
  */
 public class DefaultServiceErrorManager implements ServiceErrorManager {
 

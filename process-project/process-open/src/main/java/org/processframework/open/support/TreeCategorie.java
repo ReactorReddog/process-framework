@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * @author apple
+ * @author apple 
  * @package com.cn.processframework.doc.support
  * @desc <p>单目录接口数据等</p>
  * @since

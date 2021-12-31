@@ -1,7 +1,7 @@
 package com.cn.processframework.pay.support.baidu;
 
 /**
- * @author apple
+ * @author apple 
  */
 public class Asserts {
     

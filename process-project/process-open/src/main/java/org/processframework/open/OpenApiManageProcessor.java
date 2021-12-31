@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Objects;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 注解扫描
  * @since 1.0.0.RELEASE
  */

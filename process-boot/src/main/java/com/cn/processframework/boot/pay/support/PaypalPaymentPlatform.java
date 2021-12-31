@@ -13,7 +13,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 贝宝支付平台
  * @since 1.0 23:43
  */

@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 企业自建应用授权范围
  * @since 1.0 22:08
  */

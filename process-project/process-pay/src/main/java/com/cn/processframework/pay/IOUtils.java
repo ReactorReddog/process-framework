@@ -12,7 +12,7 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * @author apple
+ * @author apple 
  * @desc General IO stream manipulation utilities.
  * @since 1.0 17:20
  */

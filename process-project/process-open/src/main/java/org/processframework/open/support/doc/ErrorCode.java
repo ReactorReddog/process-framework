@@ -5,7 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 错误码解释
  * @since 1.0.0.RELEASE
  */

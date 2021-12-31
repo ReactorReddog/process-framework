@@ -3,7 +3,7 @@ package com.cn.processframework.pay.support.payoneer;
 import com.cn.processframework.pay.TransactionType;
 
 /**
- * @author apple
+ * @author apple 
  * @desc PayoneerT支付类型
  * @since 1.0 21:12
  */

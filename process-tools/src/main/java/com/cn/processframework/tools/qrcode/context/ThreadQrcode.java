@@ -4,7 +4,7 @@ package com.cn.processframework.tools.qrcode.context;
 import java.awt.image.BufferedImage;
 
 /**
- * @author apple
+ * @author apple 
  * @desc
  * @since 1.0.0.RELEASE
  */

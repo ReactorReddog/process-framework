@@ -1,7 +1,7 @@
 package org.processframework.gateway.common.constant;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 网关常量
  * @since 1.0.0.RELEASE
  */

@@ -26,7 +26,7 @@ import java.util.concurrent.ConcurrentMap;
  *     2. ClassLoader 跟 target 保持一致
  * </p>
  *
- * @author apple
+ * @author apple 
  */
 public abstract class ProcessBeanCopier {
 	private static final Type CONVERTER = TypeUtils.parseType("org.springframework.cglib.core.Converter");
@@ -103,7 +103,7 @@ public abstract class ProcessBeanCopier {
 
 		@Override
 		protected ClassLoader getDefaultClassLoader() {
-			// apple 保证 和 返回使用同一个 ClassLoader
+			// apple  保证 和 返回使用同一个 ClassLoader
 			return target.getClassLoader();
 		}
 
@@ -185,7 +185,7 @@ public abstract class ProcessBeanCopier {
 				Class<?> getterPropertyType = getter.getPropertyType();
 				Class<?> setterPropertyType = setter.getPropertyType();
 
-				// apple 2019.01.12 优化逻辑，先判断类型，类型一致直接 set，不同再判断 是否 类型转换
+				// apple  2019.01.12 优化逻辑，先判断类型，类型一致直接 set，不同再判断 是否 类型转换
 				// nonNull Label
 				Label l0 = e.make_label();
 				// 判断类型是否一致，包括 包装类型
@@ -284,7 +284,7 @@ public abstract class ProcessBeanCopier {
 		 * @param targetType targetType
 		 */
 		public void generateClassFormMap(ClassEmitter ce, CodeEmitter e, Type sourceType, Type targetType) {
-			// 2018.12.27 by apple 支持链式 bean
+			// 2018.12.27 by apple  支持链式 bean
 			PropertyDescriptor[] setters = ReflectUtil.getBeanSetters(target);
 
 			// 入口变量

@@ -5,7 +5,7 @@ import lombok.*;
 import java.io.Serializable;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 授权回调参数类
  * @since 1.0 21:15
  */

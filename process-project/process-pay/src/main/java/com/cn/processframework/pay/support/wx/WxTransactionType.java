@@ -8,7 +8,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 微信交易类型
  * @since 1.0 22:01
  */
@@ -102,7 +102,7 @@ public enum  WxTransactionType implements TransactionType {
             return true;
         }
     },
-    // TODO 2020/3/8 19:14 author: apple  交易辅助接口
+    // TODO 2020/3/8 19:14 author: apple   交易辅助接口
     /**
      * 查询订单
      */

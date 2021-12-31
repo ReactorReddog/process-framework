@@ -21,7 +21,7 @@ import com.xkcoding.http.util.MapUtil;
 import java.util.Map;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 微软登录
  * @since 1.5.0
  */

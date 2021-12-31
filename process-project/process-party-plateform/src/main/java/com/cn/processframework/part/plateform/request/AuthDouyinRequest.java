@@ -15,7 +15,7 @@ import com.cn.processframework.part.plateform.HttpUtils;
 import com.cn.processframework.part.plateform.UrlBuilder;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 抖音登录
  * @since 1.0 22:21
  */

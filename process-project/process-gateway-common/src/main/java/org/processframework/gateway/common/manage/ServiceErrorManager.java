@@ -6,7 +6,7 @@ import org.processframework.gateway.common.core.ErrorEntity;
 import java.util.Collection;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 服务错误信息管理
  * @since 1.0.0.RELEASE
  */

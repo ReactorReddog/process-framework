@@ -1,7 +1,7 @@
 package com.cn.processframework.pay;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 账单类型
  * @since 1.0 14:26
  */

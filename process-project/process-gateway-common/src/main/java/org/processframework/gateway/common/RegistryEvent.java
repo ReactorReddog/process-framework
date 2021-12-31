@@ -3,7 +3,7 @@ package org.processframework.gateway.common;
 import org.processframework.gateway.common.core.InstanceDefinition;
 
 /**
- * @author apple
+ * @author apple 
  * @desc 新的实例注册事件
  */
 public interface RegistryEvent {
